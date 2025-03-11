@@ -1,0 +1,14 @@
+api_config:
+  app_id: "2025344415"
+  app_key: "qleYQdctZHIbopVc"
+  domain: "api-ai.vivo.com.cn"
+  embedding_uri: "/embedding-model-api/predict/batch"
+
+model_config:
+  embedding_model: "bge-base-zh"
+  keyword_topK: 5
+  summary_sentences: 3
+
+storage:
+  vector_db_path: "./data/vector_store/chroma_db"
+  knowledge_base: "./data/knowledge_base"

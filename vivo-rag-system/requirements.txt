@@ -1,0 +1,9 @@
+jieba==0.42.1       # 中文分词
+snownlp==0.12.3     # 中文文本处理
+chromadb==0.4.15    # 向量数据库
+pyyaml==6.0.1       # 配置管理
+requests==2.31.0    # API调用
+tqdm==4.66.1        # 进度条显示
+protobuf==3.20.3    # ChromaDB依赖
+sentencepiece==0.1.99  # 文本处理依赖
+numpy==1.26.0       # 数值计算
