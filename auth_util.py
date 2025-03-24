@@ -8,57 +8,53 @@ import urllib.parse
 
 __all__ = ['gen_sign_headers']
 
-
-# 随机字符串
 def gen_nonce(length=8):
-    chars = string.ascii_lowercase + string.digits
-    return ''.join([random.choice(chars) for _ in range(length)])
+    chars = string.ascii_lowercase + string.digits  # 仅小写字母和数字
+    return ''.join(random.choices(chars, k=length))
 
-
-# 如果query项只有key没有value时，转换成params[key] = ''传入
 def gen_canonical_query_string(params):
-    if params:
-        escape_uri = urllib.parse.quote
-        raw = []
-        for k in sorted(params.keys()):
-            tmp_tuple = (escape_uri(k), escape_uri(str(params[k])))
-            raw.append(tmp_tuple)
-        s = "&".join("=".join(kv) for kv in raw)
-        return s
-    else:
-        return ''
-
+    if not params:
+        return ""
+    encoded_params = []
+    for key in sorted(params.keys()):
+        encoded_key = urllib.parse.quote(str(key), safe='')
+        encoded_value = urllib.parse.quote(str(params.get(key, "")), safe='')
+        encoded_params.append(f"{encoded_key}={encoded_value}")
+    return "&".join(encoded_params)
 
 def gen_signature(app_secret, signing_string):
-    bytes_secret = app_secret.encode('utf-8')
-    hash_obj = hmac.new(bytes_secret, signing_string, hashlib.sha256)
-    bytes_sig = base64.b64encode(hash_obj.digest())
-    signature = str(bytes_sig, encoding='utf-8')
-    return signature
-
+    sign_bytes = hmac.new(
+        app_secret.encode('utf-8'),
+        signing_string.encode('utf-8'),
+        hashlib.sha256
+    ).digest()
+    return base64.urlsafe_b64encode(sign_bytes).decode('utf-8')  # 保留等号
 
 def gen_sign_headers(app_id, app_key, method, uri, query):
     method = str(method).upper()
-    uri = uri
     timestamp = str(int(time.time()))
-    app_id = app_id
-    app_key = app_key
     nonce = gen_nonce()
     canonical_query_string = gen_canonical_query_string(query)
-    signed_headers_string = 'x-ai-gateway-app-id:{}\nx-ai-gateway-timestamp:{}\n' \
-                            'x-ai-gateway-nonce:{}'.format(app_id, timestamp, nonce)
-    signing_string = '{}\n{}\n{}\n{}\n{}\n{}'.format(method,
-                                                     uri,
-                                                     canonical_query_string,
-                                                     app_id,
-                                                     timestamp,
-                                                     signed_headers_string)
-    signing_string = signing_string.encode('utf-8')
+    
+    signed_headers_string = (
+        f'x-ai-gateway-app-id:{app_id}\n'
+        f'x-ai-gateway-timestamp:{timestamp}\n'
+        f'x-ai-gateway-nonce:{nonce}'
+    )
+    
+    signing_string = (
+        f"{method}\n{uri}\n{canonical_query_string}\n"
+        f"{app_id}\n{timestamp}\n{signed_headers_string}"
+    )
+    
+    # 调试输出
+    print("[DEBUG] Signing String (Raw):\n", repr(signing_string))
+    
     signature = gen_signature(app_key, signing_string)
     return {
         'X-AI-GATEWAY-APP-ID': app_id,
         'X-AI-GATEWAY-TIMESTAMP': timestamp,
         'X-AI-GATEWAY-NONCE': nonce,
-        'X-AI-GATEWAY-SIGNED-HEADERS': "x-ai-gateway-app-id;x-ai-gateway-timestamp;x-ai-gateway-nonce",
+        'X-AI-GATEWAY-SIGNED-HEADERS': 'x-ai-gateway-app-id;x-ai-gateway-timestamp;x-ai-gateway-nonce',
         'X-AI-GATEWAY-SIGNATURE': signature
     }
