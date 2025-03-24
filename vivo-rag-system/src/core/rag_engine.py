@@ -1,6 +1,6 @@
-from .text_processor import TextProcessor  # 从当前包导入
-from src.api.vivo_embedding import VivoEmbeddingAPI  # 绝对路径导入
-from .data_manager import VectorDBManager  # 从当前包导入
+from .text_processor import TextProcessor
+from src.api.vivo_embedding import VivoEmbeddingAPI
+from .data_manager import VectorDBManager
 
 class RAGEngine:
     def __init__(self):
@@ -9,26 +9,20 @@ class RAGEngine:
         self.db_manager = VectorDBManager()
 
     def process_query(self, user_input):
-        # 文本预处理
+        # 合并预处理和向量获取步骤
         processed = self.text_processor.process(user_input)
+        query_embedding = self.embedding_api.get_embeddings([processed['query_text']])[0]
         
-        # 获取查询向量
-        query_embedding = self.embedding_api.get_embeddings(
-            [processed['query_text']]
-        )[0]
-        
-        # 检索相关文档
-        retrieved = self.db_manager.retrieve_similar(query_embedding)
-        
-        # 构建增强上下文
-        context = "\n".join(
-            [f"相关文档 {i+1}: {doc[0]}\n关键词: {', '.join(doc[1]['keywords'])}" 
-             for i, doc in enumerate(retrieved)]
+        # 优化上下文构建过程
+        context_items = (
+            f"相关文档 {i+1}: {content}\n关键词: {', '.join(metadata['keywords'])}"
+            for i, (content, metadata) in enumerate(
+                self.db_manager.retrieve_similar(query_embedding)
+            )
         )
         
-        # 生成最终输出（此处可接入LLM）
         return {
             "keywords": processed['keywords'],
             "summary": processed['summary'],
-            "context": context
+            "context": "\n".join(context_items)
         }

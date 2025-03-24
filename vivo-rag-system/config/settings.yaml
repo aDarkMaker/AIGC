@@ -5,7 +5,7 @@ api_config:
   embedding_uri: "/embedding-model-api/predict/batch"
 
 model_config:
-  embedding_model: "bge-base-zh"
+  embedding_model: "m3e-base"
   keyword_topK: 5
   summary_sentences: 3
 
