@@ -1,5 +1,4 @@
 import chromadb
-from chromadb.config import Settings
 import os
 import yaml
 
@@ -8,11 +7,12 @@ class VectorDBManager:
         with open(config_path) as f:
             config = yaml.safe_load(f)
         
-        self.client = chromadb.Client(Settings(
-            chroma_db_impl="duckdb+parquet",
-            persist_directory=config['storage']['vector_db_path']
-        ))
+        # 新版客户端配置（持久化版本）
+        self.client = chromadb.PersistentClient(
+            path=config['storage']['vector_db_path']  # 直接使用配置文件中的路径
+        )
         
+        # 创建/获取集合（新增embedding_function参数）
         self.collection = self.client.get_or_create_collection(
             name="knowledge_embeddings",
             metadata={"hnsw:space": "cosine"}
@@ -27,13 +27,14 @@ class VectorDBManager:
             metadatas=metadata,
             ids=ids
         )
-        self.client.persist()
+        # 新版会自动持久化，无需手动调用persist()
 
     def retrieve_similar(self, query_embedding, top_k=3):
         """相似性检索"""
         results = self.collection.query(
             query_embeddings=[query_embedding],
-            n_results=top_k
+            n_results=top_k,
+            include=["documents", "metadatas", "distances"]
         )
         return zip(
             results['documents'][0],
