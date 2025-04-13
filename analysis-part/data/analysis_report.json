@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source_file": "sample_privacy.txt",
-    "token_count": 3638
+    "token_count": 3432
   },
   "keyword_analysis": {
     "total_keywords": 154,
@@ -29,10 +29,6 @@
     },
     {
       "token": "政策",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -492,14 +488,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "本",
       "category": "non-keyword"
     },
@@ -748,14 +736,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "我们",
       "category": "non-keyword"
     },
@@ -804,14 +784,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "华为",
       "category": "non-keyword"
     },
@@ -844,10 +816,6 @@
       "category": "keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "华为",
       "category": "non-keyword"
     },
@@ -860,15 +828,7 @@
       "category": "keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "Cookie",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -881,10 +841,6 @@
     },
     {
       "token": "技术",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -910,10 +866,6 @@
     {
       "token": "个人信息",
       "category": "keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
     },
     {
       "token": "您",
@@ -948,10 +900,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "华为",
       "category": "non-keyword"
     },
@@ -974,10 +922,6 @@
     {
       "token": "个人信息",
       "category": "keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
     },
     {
       "token": "华为",
@@ -1004,10 +948,6 @@
       "category": "keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "第三方",
       "category": "non-keyword"
     },
@@ -1021,10 +961,6 @@
     },
     {
       "token": "服务",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -1060,10 +996,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "本",
       "category": "non-keyword"
     },
@@ -1080,10 +1012,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "如何",
       "category": "non-keyword"
     },
@@ -1096,19 +1024,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "1",
       "category": "non-keyword"
     },
     {
       "token": ".",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -1144,15 +1064,7 @@
       "category": "keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "1.1",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -1178,10 +1090,6 @@
     {
       "token": "个人信息",
       "category": "keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
     },
     {
       "token": "个人信息",
@@ -1361,10 +1269,6 @@
     },
     {
       "token": "我",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -1744,14 +1648,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "1.1",
       "category": "non-keyword"
     },
@@ -1761,10 +1657,6 @@
     },
     {
       "token": "1",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -1789,10 +1681,6 @@
     },
     {
       "token": "信息",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -1933,14 +1821,6 @@
     },
     {
       "token": "。",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -2180,14 +2060,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "1.1",
       "category": "non-keyword"
     },
@@ -2197,10 +2069,6 @@
     },
     {
       "token": "2",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -2269,10 +2137,6 @@
     },
     {
       "token": "信息",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -2545,14 +2409,6 @@
     },
     {
       "token": "。",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -2876,18 +2732,6 @@
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "（",
       "category": "non-keyword"
     },
@@ -3076,10 +2920,6 @@
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "IP地址",
       "category": "non-keyword"
     },
@@ -3144,14 +2984,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "1.1",
       "category": "non-keyword"
     },
@@ -3161,10 +2993,6 @@
     },
     {
       "token": "3",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -3189,10 +3017,6 @@
     },
     {
       "token": "信息",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -3337,14 +3161,6 @@
     },
     {
       "token": "。",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -3836,19 +3652,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "1.2",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -3874,10 +3678,6 @@
     {
       "token": "个人信息",
       "category": "keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
     },
     {
       "token": "我们",
@@ -3917,14 +3717,6 @@
     },
     {
       "token": "：",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -4268,14 +4060,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "（",
       "category": "non-keyword"
     },
@@ -4604,27 +4388,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "数据项",
       "category": "non-keyword"
     },
     {
-      "token": "\t",
-      "category": "non-keyword"
-    },
-    {
       "token": "用途",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -4633,10 +4401,6 @@
     },
     {
       "token": "信息",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\t",
       "category": "non-keyword"
     },
     {
@@ -4701,10 +4465,6 @@
     },
     {
       "token": "等",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\t",
       "category": "non-keyword"
     },
     {
@@ -4832,19 +4592,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "互动",
       "category": "non-keyword"
     },
     {
       "token": "记录",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\t",
       "category": "non-keyword"
     },
     {
@@ -4905,10 +4657,6 @@
     },
     {
       "token": "等",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\t",
       "category": "non-keyword"
     },
     {
@@ -5029,10 +4777,6 @@
     },
     {
       "token": "等",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -5348,27 +5092,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "数据项",
       "category": "non-keyword"
     },
     {
-      "token": "\t",
-      "category": "non-keyword"
-    },
-    {
       "token": "用途",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -5377,10 +5105,6 @@
     },
     {
       "token": "信息",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\t",
       "category": "non-keyword"
     },
     {
@@ -5449,10 +5173,6 @@
     },
     {
       "token": "等",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\t",
       "category": "non-keyword"
     },
     {
@@ -5592,19 +5312,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "互动",
       "category": "non-keyword"
     },
     {
       "token": "记录",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\t",
       "category": "non-keyword"
     },
     {
@@ -5685,10 +5397,6 @@
     },
     {
       "token": "信息",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\t",
       "category": "non-keyword"
     },
     {
@@ -5780,10 +5488,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "设备",
       "category": "non-keyword"
     },
@@ -5797,10 +5501,6 @@
     },
     {
       "token": "信息",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\t",
       "category": "non-keyword"
     },
     {
@@ -5936,10 +5636,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\t",
-      "category": "non-keyword"
-    },
-    {
       "token": "用于",
       "category": "non-keyword"
     },
@@ -6025,10 +5721,6 @@
     },
     {
       "token": "体验",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -6120,14 +5812,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "（",
       "category": "non-keyword"
     },
@@ -6149,14 +5833,6 @@
     },
     {
       "token": "：",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -6213,10 +5889,6 @@
     },
     {
       "token": "。",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -6312,10 +5984,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "遵从",
       "category": "non-keyword"
     },
@@ -6380,10 +6048,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "基于",
       "category": "non-keyword"
     },
@@ -6440,27 +6104,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "数据项",
       "category": "non-keyword"
     },
     {
-      "token": "\t",
-      "category": "non-keyword"
-    },
-    {
       "token": "用途",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -6469,10 +6117,6 @@
     },
     {
       "token": "信息",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\t",
       "category": "non-keyword"
     },
     {
@@ -6620,10 +6264,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\t",
-      "category": "non-keyword"
-    },
-    {
       "token": "履行",
       "category": "non-keyword"
     },
@@ -6700,19 +6340,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "2",
       "category": "non-keyword"
     },
     {
       "token": ".",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -6728,15 +6360,7 @@
       "category": "keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "Cookie",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -6752,23 +6376,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "2.1",
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "Cookie",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -6840,15 +6452,7 @@
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "Cookie",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -6869,10 +6473,6 @@
     },
     {
       "token": "Cookie",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -6940,10 +6540,6 @@
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "的",
       "category": "non-keyword"
     },
@@ -6996,15 +6592,7 @@
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "Cookie",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -7064,10 +6652,6 @@
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "通常",
       "category": "non-keyword"
     },
@@ -7117,10 +6701,6 @@
     },
     {
       "token": "借助于",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -7180,14 +6760,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "华为",
       "category": "non-keyword"
     },
@@ -7236,15 +6808,7 @@
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "Cookie",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -7285,10 +6849,6 @@
     },
     {
       "token": "借助于",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -7340,10 +6900,6 @@
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "Cookie",
       "category": "non-keyword"
     },
@@ -7376,10 +6932,6 @@
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "Cookie",
       "category": "non-keyword"
     },
@@ -7393,10 +6945,6 @@
     },
     {
       "token": "借助于",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -7558,10 +7106,6 @@
     {
       "token": "使用",
       "category": "keyword"
-    },
-    {
-      "token": " ",
-      "category": "non-keyword"
     },
     {
       "token": "Cookie",
@@ -7760,10 +7304,6 @@
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "华为",
       "category": "non-keyword"
     },
@@ -7776,15 +7316,7 @@
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "Cookie",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -7864,10 +7396,6 @@
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "Cookie",
       "category": "non-keyword"
     },
@@ -7908,10 +7436,6 @@
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "Cookie",
       "category": "non-keyword"
     },
@@ -7944,15 +7468,7 @@
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "Cookie",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -8104,19 +7620,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "Internet",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -8124,27 +7628,7 @@
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "Google",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -8152,27 +7636,7 @@
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "Mozilla",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -8180,39 +7644,7 @@
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "Safari",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -8220,23 +7652,7 @@
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "2.2",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -8260,23 +7676,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "除",
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "Cookie",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -8417,10 +7821,6 @@
     },
     {
       "token": "点击",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -8748,14 +8148,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "您",
       "category": "non-keyword"
     },
@@ -8832,23 +8224,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "3",
       "category": "non-keyword"
     },
     {
       "token": ".",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -8874,10 +8254,6 @@
     {
       "token": "个人信息",
       "category": "keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
     },
     {
       "token": "通常",
@@ -8933,14 +8309,6 @@
     },
     {
       "token": "：",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -9189,14 +8557,6 @@
     },
     {
       "token": "；",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -9468,14 +8828,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "（",
       "category": "non-keyword"
     },
@@ -9724,14 +9076,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "（",
       "category": "non-keyword"
     },
@@ -9920,23 +9264,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "4",
       "category": "non-keyword"
     },
     {
       "token": ".",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -9969,10 +9301,6 @@
     },
     {
       "token": "权利",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -10077,14 +9405,6 @@
     },
     {
       "token": "。",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -10652,14 +9972,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "当",
       "category": "non-keyword"
     },
@@ -10920,23 +10232,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "5",
       "category": "non-keyword"
     },
     {
       "token": ".",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -10970,10 +10270,6 @@
     {
       "token": "个人信息",
       "category": "keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
     },
     {
       "token": "华为",
@@ -11425,14 +10721,6 @@
     },
     {
       "token": "。",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -12256,23 +11544,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "6",
       "category": "non-keyword"
     },
     {
       "token": ".",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -12298,10 +11574,6 @@
     {
       "token": "个人信息",
       "category": "keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
     },
     {
       "token": "我们",
@@ -12588,10 +11860,6 @@
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "如果",
       "category": "non-keyword"
     },
@@ -12704,23 +11972,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "7",
       "category": "non-keyword"
     },
     {
       "token": ".",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -12737,10 +11993,6 @@
     },
     {
       "token": "服务",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -12964,14 +12216,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "华为",
       "category": "non-keyword"
     },
@@ -13108,23 +12352,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "8",
       "category": "non-keyword"
     },
     {
       "token": ".",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -13157,10 +12389,6 @@
     },
     {
       "token": "转移",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -13900,23 +13128,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "9",
       "category": "non-keyword"
     },
     {
       "token": ".",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -13933,10 +13149,6 @@
     },
     {
       "token": "更新",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -14212,23 +13424,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "10",
       "category": "non-keyword"
     },
     {
       "token": ".",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {
@@ -14241,10 +13441,6 @@
     },
     {
       "token": "华为",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
       "category": "non-keyword"
     },
     {
@@ -14524,14 +13720,6 @@
       "category": "non-keyword"
     },
     {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
-      "token": "\n",
-      "category": "non-keyword"
-    },
-    {
       "token": "最近",
       "category": "non-keyword"
     },
@@ -14552,23 +13740,11 @@
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "年",
       "category": "non-keyword"
     },
     {
-      "token": " ",
-      "category": "non-keyword"
-    },
-    {
       "token": "5",
-      "category": "non-keyword"
-    },
-    {
-      "token": " ",
       "category": "non-keyword"
     },
     {

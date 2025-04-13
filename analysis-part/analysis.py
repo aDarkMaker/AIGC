@@ -19,7 +19,10 @@ def Preprocessing(input_path):
         text = f.read()
     
     # 使用jieba进行分词处理
-    tokens = jb.lcut(text)
+    tokens = jb.lcut(text, cut_all=False)
+    
+    # 过滤掉空格
+    tokens = [token for token in tokens if token.strip()]
     
     # 保存预处理结果
     preprocessed_path = os.path.join('data', 'preprocessed.txt')
