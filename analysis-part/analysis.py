@@ -6,12 +6,13 @@ import jieba as jb
 from collections import defaultdict
 
 # init-config-temp
-KEYWORDS = ['收集', '使用', '共享', '存储', '隐私', '条款', '数据', '个人信息']
-CONFIDENCE_WEIGHTS = {
-    '收集': 0.8, '使用': 0.7, '共享': 0.9, '存储': 0.6,
-    '隐私': 0.95, '条款': 0.5, '数据': 0.7, '个人信息': 0.85
-}
-THRESHOLD = 2.0  # 分类阈值
+CONFIG_PATH = os.path.join(os.path.dirname(__file__), 'config.json')
+with open(CONFIG_PATH, 'r', encoding='utf-8') as config_file:
+    config = json.load(config_file)
+
+KEYWORDS = config["KEYWORDS"]
+CONFIDENCE_WEIGHTS = config["CONFIDENCE_WEIGHTS"]
+THRESHOLD = config["THRESHOLD"]
 
 def Preprocessing(input_path):
     """文本预处理与格式转换"""
