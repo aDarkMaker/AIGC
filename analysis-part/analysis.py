@@ -60,7 +60,7 @@ def confidence_voting(keyword_counts):
 
 def calculate_privacy_score(confidence, count):
     """计算隐私条款分数"""
-    return float(confidence * np.log1p(count))  # 转换为Python float
+    return float(confidence * np.log1p(count)) 
 
 def generate_advice(score):
     """生成指导建议"""
