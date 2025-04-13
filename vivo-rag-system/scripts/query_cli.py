@@ -19,7 +19,7 @@ def main():
         print("\n=== 分析结果 ===")
         print(f"关键词: {', '.join(result['keywords'])}")
         print(f"\n摘要: {result['summary']}")
-        print(f"\n增强上下文:\n{result['context']}")
+        # print(f"\n增强上下文:\n{result['context']}")
 
 if __name__ == "__main__":
     main()
