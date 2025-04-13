@@ -33,7 +33,7 @@ def Preprocessing(input_path):
     return tokens
 
 def analyze_tokens(tokens):
-    """执行词条分析与分类"""
+    """Voting机制分析"""
     keyword_counts = defaultdict(int)
     classified = []
     
@@ -71,11 +71,11 @@ def generate_advice(score):
 
 def save_results(results, json_path, csv_path):
     """保存结果文件"""
-    # 保存JSON格式
+    # json
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
     
-    # 转换为CSV格式
+    # csv
     csv_data = {
         'privacy_score': results['privacy_score'],
         'risk_level': 'high' if results['privacy_score'] >= THRESHOLD else 'low',
@@ -83,7 +83,7 @@ def save_results(results, json_path, csv_path):
         'confidence': f"{results['average_confidence']:.2%}",
         'advice': results['advice']
     }
-    # 添加关键词统计
+    # total
     for kw in KEYWORDS:
         csv_data[f'count_{kw}'] = results['keyword_counts'].get(kw, 0)
     
@@ -93,18 +93,18 @@ def process_pipeline(input_path):
     """完整处理流程"""
     os.makedirs('data', exist_ok=True)
     
-    # 预处理阶段
+    # preprocess
     tokens = Preprocessing(input_path)
     
-    # 分析阶段
+    # analysis
     classified, keyword_counts = analyze_tokens(tokens)
     avg_confidence, total_keywords = confidence_voting(keyword_counts)
     
-    # 计算与决策
+    # canculate
     privacy_score = calculate_privacy_score(avg_confidence, total_keywords)
     advice = generate_advice(privacy_score)
     
-    # 构建结果
+    # build
     results = {
         'metadata': {
             'source_file': os.path.basename(input_path),
@@ -113,22 +113,22 @@ def process_pipeline(input_path):
         'keyword_analysis': {
             'total_keywords': total_keywords,
             'keyword_distribution': keyword_counts,
-            'average_confidence': float(avg_confidence),  # 转换numpy类型
+            'average_confidence': float(avg_confidence),
         },
         'privacy_score': round(privacy_score, 2),
         'risk_assessment': {
             'threshold': THRESHOLD,
-            'is_high_risk': bool(privacy_score >= THRESHOLD),  # 转换为Python bool
+            'is_high_risk': bool(privacy_score >= THRESHOLD),
             'advice': advice
         },
         'token_details': classified,
         'keyword_counts': keyword_counts,
-        'average_confidence': float(avg_confidence),  # 转换numpy类型
+        'average_confidence': float(avg_confidence),
         'total_keywords': total_keywords,
         'advice': advice
     }
     
-    # 保存输出
+    # save
     save_results(
         results,
         os.path.join('data', 'analysis_report.json'),
@@ -137,7 +137,6 @@ def process_pipeline(input_path):
     return results
 
 if __name__ == "__main__":
-    # 示例用法
-    input_file = "sample_privacy.txt"  # 输入文本路径
+    input_file = "sample_privacy.txt"
     process_pipeline(input_file)
     print("analysis completed and results saved.")
