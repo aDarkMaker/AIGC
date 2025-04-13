@@ -1,6 +1,6 @@
 import requests
 import yaml
-from ..utils.auth_util import gen_sign_headers  # 假设这是正确实现的签名方法
+from ..utils.auth_util import gen_sign_headers
 import os
 import json
 
