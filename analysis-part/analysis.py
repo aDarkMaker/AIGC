@@ -20,7 +20,7 @@ def Preprocessing(input_path):
         text = f.read()
     
     # 使用jieba进行分词处理
-    tokens = jb.lcut(text, cut_all=False)
+    tokens = jb.lcut(text, cut_all=True)
     
     # 过滤掉空格
     tokens = [token for token in tokens if token.strip()]

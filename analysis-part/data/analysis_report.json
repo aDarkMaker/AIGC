@@ -1,22 +1,23 @@
 {
   "metadata": {
     "source_file": "sample_privacy.txt",
-    "token_count": 3432
+    "token_count": 3984
   },
   "keyword_analysis": {
-    "total_keywords": 154,
+    "total_keywords": 177,
     "keyword_distribution": {
-      "隐私": 14,
-      "个人信息": 55,
+      "隐私": 15,
+      "个人信息": 61,
       "收集": 24,
-      "数据": 24,
+      "数据": 37,
       "使用": 31,
-      "存储": 5,
-      "共享": 1
+      "存储": 6,
+      "共享": 1,
+      "条款": 2
     },
-    "average_confidence": 0.7899350649350649
+    "average_confidence": 0.7819209039548022
   },
-  "privacy_score": 3.98,
+  "privacy_score": 4.05,
   "risk_assessment": {
     "threshold": 2.0,
     "is_high_risk": true,
@@ -32,7 +33,31 @@
       "category": "non-keyword"
     },
     {
+      "token": "华为",
+      "category": "non-keyword"
+    },
+    {
+      "token": "华为技术",
+      "category": "non-keyword"
+    },
+    {
       "token": "华为技术有限公司",
+      "category": "non-keyword"
+    },
+    {
+      "token": "技术",
+      "category": "non-keyword"
+    },
+    {
+      "token": "有限",
+      "category": "non-keyword"
+    },
+    {
+      "token": "有限公司",
+      "category": "non-keyword"
+    },
+    {
+      "token": "公司",
       "category": "non-keyword"
     },
     {
@@ -64,6 +89,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "文简",
+      "category": "non-keyword"
+    },
+    {
       "token": "简称",
       "category": "non-keyword"
     },
@@ -76,15 +105,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "”",
-      "category": "non-keyword"
-    },
-    {
-      "token": "、",
-      "category": "non-keyword"
-    },
-    {
-      "token": "“",
+      "token": "”、“",
       "category": "non-keyword"
     },
     {
@@ -112,11 +133,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "”",
-      "category": "non-keyword"
-    },
-    {
-      "token": "）",
+      "token": "”）",
       "category": "non-keyword"
     },
     {
@@ -140,6 +157,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "重要",
+      "category": "non-keyword"
+    },
+    {
       "token": "重要性",
       "category": "non-keyword"
     },
@@ -148,7 +169,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "并会",
+      "token": "并",
+      "category": "non-keyword"
+    },
+    {
+      "token": "会",
       "category": "non-keyword"
     },
     {
@@ -192,8 +217,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "之前",
@@ -232,15 +265,15 @@
       "category": "non-keyword"
     },
     {
-      "token": "》",
-      "category": "non-keyword"
-    },
-    {
-      "token": "（",
+      "token": "》（",
       "category": "non-keyword"
     },
     {
       "token": "下文",
+      "category": "non-keyword"
+    },
+    {
+      "token": "文简",
       "category": "non-keyword"
     },
     {
@@ -260,15 +293,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "”",
-      "category": "non-keyword"
-    },
-    {
-      "token": "）",
-      "category": "non-keyword"
-    },
-    {
-      "token": "。",
+      "token": "”）。",
       "category": "non-keyword"
     },
     {
@@ -284,7 +309,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "于",
+      "token": "用于",
       "category": "non-keyword"
     },
     {
@@ -316,7 +341,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "至本",
+      "token": "至",
+      "category": "non-keyword"
+    },
+    {
+      "token": "本",
       "category": "non-keyword"
     },
     {
@@ -364,7 +393,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "的",
+      "token": "别的",
       "category": "non-keyword"
     },
     {
@@ -384,11 +413,39 @@
       "category": "non-keyword"
     },
     {
+      "token": "华为",
+      "category": "non-keyword"
+    },
+    {
+      "token": "华为技术",
+      "category": "non-keyword"
+    },
+    {
       "token": "华为技术有限公司",
       "category": "non-keyword"
     },
     {
+      "token": "技术",
+      "category": "non-keyword"
+    },
+    {
+      "token": "有限",
+      "category": "non-keyword"
+    },
+    {
+      "token": "有限公司",
+      "category": "non-keyword"
+    },
+    {
+      "token": "公司",
+      "category": "non-keyword"
+    },
+    {
       "token": "（",
+      "category": "non-keyword"
+    },
+    {
+      "token": "注册",
       "category": "non-keyword"
     },
     {
@@ -400,7 +457,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "深圳",
+      "category": "non-keyword"
+    },
+    {
       "token": "深圳市",
+      "category": "non-keyword"
+    },
+    {
+      "token": "龙岗",
       "category": "non-keyword"
     },
     {
@@ -408,7 +473,15 @@
       "category": "non-keyword"
     },
     {
-      "token": "坂田",
+      "token": "岗区",
+      "category": "non-keyword"
+    },
+    {
+      "token": "坂",
+      "category": "non-keyword"
+    },
+    {
+      "token": "田",
       "category": "non-keyword"
     },
     {
@@ -417,6 +490,10 @@
     },
     {
       "token": "总部",
+      "category": "non-keyword"
+    },
+    {
+      "token": "办公",
       "category": "non-keyword"
     },
     {
@@ -436,7 +513,31 @@
       "category": "non-keyword"
     },
     {
+      "token": "华为",
+      "category": "non-keyword"
+    },
+    {
+      "token": "华为技术",
+      "category": "non-keyword"
+    },
+    {
       "token": "华为技术有限公司",
+      "category": "non-keyword"
+    },
+    {
+      "token": "技术",
+      "category": "non-keyword"
+    },
+    {
+      "token": "有限",
+      "category": "non-keyword"
+    },
+    {
+      "token": "有限公司",
+      "category": "non-keyword"
+    },
+    {
+      "token": "公司",
       "category": "non-keyword"
     },
     {
@@ -464,8 +565,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "的",
@@ -476,7 +585,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人信息",
+      "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
+    },
+    {
       "token": "信息处理",
+      "category": "non-keyword"
+    },
+    {
+      "token": "处理",
       "category": "non-keyword"
     },
     {
@@ -512,6 +633,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "何处",
+      "category": "non-keyword"
+    },
+    {
       "token": "处理",
       "category": "non-keyword"
     },
@@ -524,15 +649,27 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "，",
       "category": "non-keyword"
     },
     {
-      "token": "但本",
+      "token": "但",
+      "category": "non-keyword"
+    },
+    {
+      "token": "本",
       "category": "non-keyword"
     },
     {
@@ -568,7 +705,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "数据",
+      "category": "keyword"
+    },
+    {
       "token": "数据处理",
+      "category": "non-keyword"
+    },
+    {
+      "token": "处理",
       "category": "non-keyword"
     },
     {
@@ -604,6 +749,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "定数",
+      "category": "non-keyword"
+    },
+    {
       "token": "数据",
       "category": "keyword"
     },
@@ -636,6 +785,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "定产",
+      "category": "non-keyword"
+    },
+    {
       "token": "产品",
       "category": "non-keyword"
     },
@@ -662,6 +815,10 @@
     {
       "token": "隐私",
       "category": "keyword"
+    },
+    {
+      "token": "私通",
+      "category": "non-keyword"
     },
     {
       "token": "通知",
@@ -704,6 +861,10 @@
       "category": "keyword"
     },
     {
+      "token": "集数",
+      "category": "non-keyword"
+    },
+    {
       "token": "数据",
       "category": "keyword"
     },
@@ -724,7 +885,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "中",
+      "token": "中发",
       "category": "non-keyword"
     },
     {
@@ -744,7 +905,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "本",
+      "token": "定本",
       "category": "non-keyword"
     },
     {
@@ -768,7 +929,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "您",
+      "token": "助您",
       "category": "non-keyword"
     },
     {
@@ -776,7 +937,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "以下",
+      "category": "non-keyword"
+    },
+    {
       "token": "以下内容",
+      "category": "non-keyword"
+    },
+    {
+      "token": "内容",
       "category": "non-keyword"
     },
     {
@@ -812,8 +981,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "华为",
@@ -864,8 +1041,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "您",
@@ -880,7 +1065,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人信息",
+      "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
+    },
+    {
       "token": "信息处理",
+      "category": "non-keyword"
+    },
+    {
+      "token": "处理",
       "category": "non-keyword"
     },
     {
@@ -920,8 +1117,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "华为",
@@ -929,6 +1134,10 @@
     },
     {
       "token": "如何",
+      "category": "non-keyword"
+    },
+    {
+      "token": "何处",
       "category": "non-keyword"
     },
     {
@@ -944,11 +1153,31 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
     },
     {
+      "token": "信息",
+      "category": "non-keyword"
+    },
+    {
+      "token": "第三",
+      "category": "non-keyword"
+    },
+    {
       "token": "第三方",
+      "category": "non-keyword"
+    },
+    {
+      "token": "三方",
+      "category": "non-keyword"
+    },
+    {
+      "token": "提供",
       "category": "non-keyword"
     },
     {
@@ -972,15 +1201,23 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "如何",
       "category": "non-keyword"
     },
     {
-      "token": "在",
+      "token": "何在",
       "category": "non-keyword"
     },
     {
@@ -1060,11 +1297,27 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
     },
     {
-      "token": "1.1",
+      "token": "信息",
+      "category": "non-keyword"
+    },
+    {
+      "token": "1",
+      "category": "non-keyword"
+    },
+    {
+      "token": ".",
+      "category": "non-keyword"
+    },
+    {
+      "token": "1",
       "category": "non-keyword"
     },
     {
@@ -1088,19 +1341,39 @@
       "category": "non-keyword"
     },
     {
-      "token": "个人信息",
-      "category": "keyword"
+      "token": "个人",
+      "category": "non-keyword"
     },
     {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
+    },
+    {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
+      "token": "个人信息",
+      "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "是",
       "category": "non-keyword"
     },
     {
-      "token": "指以",
+      "token": "指",
+      "category": "non-keyword"
+    },
+    {
+      "token": "以",
       "category": "non-keyword"
     },
     {
@@ -1152,7 +1425,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "的",
+      "token": "别的",
+      "category": "non-keyword"
+    },
+    {
+      "token": "自然",
       "category": "non-keyword"
     },
     {
@@ -1192,7 +1469,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "化",
+      "token": "化处",
       "category": "non-keyword"
     },
     {
@@ -1236,7 +1513,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "和",
+      "token": "和服",
       "category": "non-keyword"
     },
     {
@@ -1296,8 +1573,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "。",
@@ -1324,7 +1609,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "和",
+      "token": "和服",
       "category": "non-keyword"
     },
     {
@@ -1376,7 +1661,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "数据",
+      "category": "keyword"
+    },
+    {
       "token": "数据类型",
+      "category": "non-keyword"
+    },
+    {
+      "token": "类型",
       "category": "non-keyword"
     },
     {
@@ -1388,7 +1681,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "有所",
+      "category": "non-keyword"
+    },
+    {
       "token": "有所不同",
+      "category": "non-keyword"
+    },
+    {
+      "token": "不同",
       "category": "non-keyword"
     },
     {
@@ -1420,8 +1721,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "，",
@@ -1492,7 +1801,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "您",
+      "token": "您提",
       "category": "non-keyword"
     },
     {
@@ -1568,7 +1877,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "仅会",
+      "token": "仅",
+      "category": "non-keyword"
+    },
+    {
+      "token": "会",
       "category": "non-keyword"
     },
     {
@@ -1612,8 +1925,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "，",
@@ -1636,8 +1957,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "包括",
@@ -1648,7 +1977,15 @@
       "category": "non-keyword"
     },
     {
-      "token": "1.1",
+      "token": "1",
+      "category": "non-keyword"
+    },
+    {
+      "token": ".",
+      "category": "non-keyword"
+    },
+    {
+      "token": "1",
       "category": "non-keyword"
     },
     {
@@ -1744,7 +2081,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "您",
+      "token": "您提",
       "category": "non-keyword"
     },
     {
@@ -1760,8 +2097,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "，",
@@ -1812,7 +2157,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "联系",
+      "category": "non-keyword"
+    },
+    {
       "token": "联系电话",
+      "category": "non-keyword"
+    },
+    {
+      "token": "电话",
       "category": "non-keyword"
     },
     {
@@ -2060,7 +2413,15 @@
       "category": "non-keyword"
     },
     {
-      "token": "1.1",
+      "token": "1",
+      "category": "non-keyword"
+    },
+    {
+      "token": ".",
+      "category": "non-keyword"
+    },
+    {
+      "token": "1",
       "category": "non-keyword"
     },
     {
@@ -2112,7 +2473,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "和",
+      "token": "和服",
       "category": "non-keyword"
     },
     {
@@ -2204,7 +2565,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "和",
+      "token": "和服",
       "category": "non-keyword"
     },
     {
@@ -2288,7 +2649,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "操作",
+      "category": "non-keyword"
+    },
+    {
       "token": "操作系统",
+      "category": "non-keyword"
+    },
+    {
+      "token": "系统",
       "category": "non-keyword"
     },
     {
@@ -2305,6 +2674,10 @@
     },
     {
       "token": "、",
+      "category": "non-keyword"
+    },
+    {
+      "token": "浏览",
       "category": "non-keyword"
     },
     {
@@ -2332,7 +2705,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "分辨",
+      "category": "non-keyword"
+    },
+    {
       "token": "分辨率",
+      "category": "non-keyword"
+    },
+    {
+      "token": "辨率",
       "category": "non-keyword"
     },
     {
@@ -2356,6 +2737,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "地址",
+      "category": "non-keyword"
+    },
+    {
       "token": "、",
       "category": "non-keyword"
     },
@@ -2364,7 +2749,23 @@
       "category": "non-keyword"
     },
     {
+      "token": "网络服务",
+      "category": "non-keyword"
+    },
+    {
+      "token": "服务",
+      "category": "non-keyword"
+    },
+    {
       "token": "服务提供商",
+      "category": "non-keyword"
+    },
+    {
+      "token": "提供",
+      "category": "non-keyword"
+    },
+    {
+      "token": "提供商",
       "category": "non-keyword"
     },
     {
@@ -2388,7 +2789,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "而异",
+      "token": "而",
+      "category": "non-keyword"
+    },
+    {
+      "token": "异",
       "category": "non-keyword"
     },
     {
@@ -2448,7 +2853,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "将会",
+      "token": "将",
+      "category": "non-keyword"
+    },
+    {
+      "token": "会",
       "category": "non-keyword"
     },
     {
@@ -2532,7 +2941,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "给",
+      "token": "交给",
       "category": "non-keyword"
     },
     {
@@ -2548,7 +2957,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "您",
+      "token": "您提",
       "category": "non-keyword"
     },
     {
@@ -2556,7 +2965,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "给",
+      "token": "供给",
       "category": "non-keyword"
     },
     {
@@ -2668,11 +3077,15 @@
       "category": "non-keyword"
     },
     {
-      "token": "或",
+      "token": "线或",
       "category": "non-keyword"
     },
     {
       "token": "通过",
+      "category": "non-keyword"
+    },
+    {
+      "token": "过电",
       "category": "non-keyword"
     },
     {
@@ -2696,7 +3109,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "线",
+      "token": "加线",
       "category": "non-keyword"
     },
     {
@@ -2704,7 +3117,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "下",
+      "token": "线下",
       "category": "non-keyword"
     },
     {
@@ -2780,7 +3193,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "和",
+      "token": "和服",
       "category": "non-keyword"
     },
     {
@@ -2840,7 +3253,7 @@
       "category": "keyword"
     },
     {
-      "token": "并",
+      "token": "并存",
       "category": "non-keyword"
     },
     {
@@ -2884,6 +3297,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "次访问",
+      "category": "non-keyword"
+    },
+    {
       "token": "访问",
       "category": "non-keyword"
     },
@@ -2916,11 +3333,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "客户",
+      "category": "non-keyword"
+    },
+    {
       "token": "客户端",
       "category": "non-keyword"
     },
     {
       "token": "IP地址",
+      "category": "non-keyword"
+    },
+    {
+      "token": "地址",
       "category": "non-keyword"
     },
     {
@@ -2984,7 +3409,15 @@
       "category": "non-keyword"
     },
     {
-      "token": "1.1",
+      "token": "1",
+      "category": "non-keyword"
+    },
+    {
+      "token": ".",
+      "category": "non-keyword"
+    },
+    {
+      "token": "1",
       "category": "non-keyword"
     },
     {
@@ -2996,7 +3429,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "第三",
+      "category": "non-keyword"
+    },
+    {
       "token": "第三方",
+      "category": "non-keyword"
+    },
+    {
+      "token": "三方",
       "category": "non-keyword"
     },
     {
@@ -3013,6 +3454,10 @@
     },
     {
       "token": "公开",
+      "category": "non-keyword"
+    },
+    {
+      "token": "公开信",
       "category": "non-keyword"
     },
     {
@@ -3052,7 +3497,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "还会",
+      "token": "还",
+      "category": "non-keyword"
+    },
+    {
+      "token": "会",
       "category": "non-keyword"
     },
     {
@@ -3072,7 +3521,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "第三",
+      "category": "non-keyword"
+    },
+    {
       "token": "第三方",
+      "category": "non-keyword"
+    },
+    {
+      "token": "三方",
       "category": "non-keyword"
     },
     {
@@ -3081,6 +3538,10 @@
     },
     {
       "token": "公开",
+      "category": "non-keyword"
+    },
+    {
+      "token": "开来",
       "category": "non-keyword"
     },
     {
@@ -3136,8 +3597,20 @@
       "category": "non-keyword"
     },
     {
+      "token": "统计",
+      "category": "non-keyword"
+    },
+    {
       "token": "统计数据",
       "category": "non-keyword"
+    },
+    {
+      "token": "计数",
+      "category": "non-keyword"
+    },
+    {
+      "token": "数据",
+      "category": "keyword"
     },
     {
       "token": "来",
@@ -3192,6 +3665,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "识别",
+      "category": "non-keyword"
+    },
+    {
       "token": "识别性",
       "category": "non-keyword"
     },
@@ -3205,6 +3682,10 @@
     },
     {
       "token": "非",
+      "category": "non-keyword"
+    },
+    {
+      "token": "识别",
       "category": "non-keyword"
     },
     {
@@ -3236,7 +3717,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人身份",
+      "category": "non-keyword"
+    },
+    {
+      "token": "人身",
+      "category": "non-keyword"
+    },
+    {
+      "token": "身份",
       "category": "non-keyword"
     },
     {
@@ -3280,8 +3773,20 @@
       "category": "non-keyword"
     },
     {
+      "token": "统计",
+      "category": "non-keyword"
+    },
+    {
       "token": "统计数据",
       "category": "non-keyword"
+    },
+    {
+      "token": "计数",
+      "category": "non-keyword"
+    },
+    {
+      "token": "数据",
+      "category": "keyword"
     },
     {
       "token": "，",
@@ -3293,6 +3798,10 @@
     },
     {
       "token": "网站",
+      "category": "non-keyword"
+    },
+    {
+      "token": "访问",
       "category": "non-keyword"
     },
     {
@@ -3368,7 +3877,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "和",
+      "token": "和服",
       "category": "non-keyword"
     },
     {
@@ -3452,7 +3961,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "自行",
+      "category": "non-keyword"
+    },
+    {
       "token": "自行决定",
+      "category": "non-keyword"
+    },
+    {
+      "token": "决定",
+      "category": "non-keyword"
+    },
+    {
+      "token": "定出",
       "category": "non-keyword"
     },
     {
@@ -3508,6 +4029,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "识别",
+      "category": "non-keyword"
+    },
+    {
       "token": "识别性",
       "category": "non-keyword"
     },
@@ -3536,7 +4061,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "您",
+      "token": "离您",
       "category": "non-keyword"
     },
     {
@@ -3544,8 +4069,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "和",
@@ -3553,6 +4086,10 @@
     },
     {
       "token": "非",
+      "category": "non-keyword"
+    },
+    {
+      "token": "识别",
       "category": "non-keyword"
     },
     {
@@ -3588,6 +4125,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "种数",
+      "category": "non-keyword"
+    },
+    {
       "token": "数据",
       "category": "keyword"
     },
@@ -3600,8 +4141,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "掺杂",
@@ -3616,6 +4165,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "识别",
+      "category": "non-keyword"
+    },
+    {
       "token": "识别性",
       "category": "non-keyword"
     },
@@ -3625,6 +4178,10 @@
     },
     {
       "token": "，",
+      "category": "non-keyword"
+    },
+    {
+      "token": "依旧",
       "category": "non-keyword"
     },
     {
@@ -3644,7 +4201,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人信息",
+      "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
+    },
+    {
       "token": "信息处理",
+      "category": "non-keyword"
+    },
+    {
+      "token": "处理",
       "category": "non-keyword"
     },
     {
@@ -3652,7 +4221,15 @@
       "category": "non-keyword"
     },
     {
-      "token": "1.2",
+      "token": "1",
+      "category": "non-keyword"
+    },
+    {
+      "token": ".",
+      "category": "non-keyword"
+    },
+    {
+      "token": "2",
       "category": "non-keyword"
     },
     {
@@ -3676,8 +4253,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "我们",
@@ -3700,8 +4285,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "用于",
@@ -3736,6 +4329,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "建账",
+      "category": "non-keyword"
+    },
+    {
       "token": "账户",
       "category": "non-keyword"
     },
@@ -3748,7 +4345,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "为",
+      "token": "华为",
       "category": "non-keyword"
     },
     {
@@ -3756,7 +4353,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "和",
+      "token": "和服",
       "category": "non-keyword"
     },
     {
@@ -3764,7 +4361,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "感兴",
+      "category": "non-keyword"
+    },
+    {
       "token": "感兴趣",
+      "category": "non-keyword"
+    },
+    {
+      "token": "兴趣",
       "category": "non-keyword"
     },
     {
@@ -3781,6 +4386,10 @@
     },
     {
       "token": "创建",
+      "category": "non-keyword"
+    },
+    {
+      "token": "建华",
       "category": "non-keyword"
     },
     {
@@ -3864,11 +4473,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "护产",
+      "category": "non-keyword"
+    },
+    {
       "token": "产品",
       "category": "non-keyword"
     },
     {
-      "token": "和",
+      "token": "和服",
       "category": "non-keyword"
     },
     {
@@ -3940,6 +4553,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "建账",
+      "category": "non-keyword"
+    },
+    {
       "token": "账户",
       "category": "non-keyword"
     },
@@ -3980,8 +4597,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "，",
@@ -4036,7 +4661,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "联系",
+      "category": "non-keyword"
+    },
+    {
       "token": "联系电话",
+      "category": "non-keyword"
+    },
+    {
+      "token": "电话",
       "category": "non-keyword"
     },
     {
@@ -4128,7 +4761,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "线上",
+      "token": "加线",
+      "category": "non-keyword"
+    },
+    {
+      "token": "上",
       "category": "non-keyword"
     },
     {
@@ -4149,6 +4786,10 @@
     },
     {
       "token": "要求",
+      "category": "non-keyword"
+    },
+    {
+      "token": "求进",
       "category": "non-keyword"
     },
     {
@@ -4224,7 +4865,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "白皮",
+      "category": "non-keyword"
+    },
+    {
       "token": "白皮书",
+      "category": "non-keyword"
+    },
+    {
+      "token": "皮书",
       "category": "non-keyword"
     },
     {
@@ -4236,15 +4885,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "电子",
+      "category": "non-keyword"
+    },
+    {
       "token": "电子杂志",
       "category": "non-keyword"
     },
     {
-      "token": "）",
+      "token": "杂志",
       "category": "non-keyword"
     },
     {
-      "token": "，",
+      "token": "），",
       "category": "non-keyword"
     },
     {
@@ -4252,7 +4905,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "就",
+      "token": "就任",
       "category": "non-keyword"
     },
     {
@@ -4304,7 +4957,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "技术",
+      "category": "non-keyword"
+    },
+    {
       "token": "技术支持",
+      "category": "non-keyword"
+    },
+    {
+      "token": "支持",
       "category": "non-keyword"
     },
     {
@@ -4348,11 +5009,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "）",
-      "category": "non-keyword"
-    },
-    {
-      "token": "，",
+      "token": "），",
       "category": "non-keyword"
     },
     {
@@ -4388,6 +5045,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "数据",
+      "category": "keyword"
+    },
+    {
       "token": "数据项",
       "category": "non-keyword"
     },
@@ -4404,7 +5065,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "您",
+      "token": "您提",
       "category": "non-keyword"
     },
     {
@@ -4488,7 +5149,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "如向",
+      "token": "如",
+      "category": "non-keyword"
+    },
+    {
+      "token": "向",
       "category": "non-keyword"
     },
     {
@@ -4512,7 +5177,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "电子",
+      "category": "non-keyword"
+    },
+    {
       "token": "电子杂志",
+      "category": "non-keyword"
+    },
+    {
+      "token": "杂志",
       "category": "non-keyword"
     },
     {
@@ -4628,7 +5301,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "电子",
+      "category": "non-keyword"
+    },
+    {
       "token": "电子邮件",
+      "category": "non-keyword"
+    },
+    {
+      "token": "邮件",
       "category": "non-keyword"
     },
     {
@@ -4644,7 +5325,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "下",
+      "token": "线下",
       "category": "non-keyword"
     },
     {
@@ -4680,7 +5361,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "如向",
+      "token": "如",
+      "category": "non-keyword"
+    },
+    {
+      "token": "向",
       "category": "non-keyword"
     },
     {
@@ -4704,7 +5389,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "电子",
+      "category": "non-keyword"
+    },
+    {
       "token": "电子杂志",
+      "category": "non-keyword"
+    },
+    {
+      "token": "杂志",
       "category": "non-keyword"
     },
     {
@@ -4808,6 +5501,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "关内",
+      "category": "non-keyword"
+    },
+    {
       "token": "内容",
       "category": "non-keyword"
     },
@@ -4884,7 +5581,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "能感",
+      "category": "non-keyword"
+    },
+    {
+      "token": "感兴",
+      "category": "non-keyword"
+    },
+    {
       "token": "感兴趣",
+      "category": "non-keyword"
+    },
+    {
+      "token": "兴趣",
       "category": "non-keyword"
     },
     {
@@ -4896,7 +5605,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "和",
+      "token": "和服",
       "category": "non-keyword"
     },
     {
@@ -4952,11 +5661,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "）",
-      "category": "non-keyword"
-    },
-    {
-      "token": "、",
+      "token": "）、",
       "category": "non-keyword"
     },
     {
@@ -4969,6 +5674,10 @@
     },
     {
       "token": "或",
+      "category": "non-keyword"
+    },
+    {
+      "token": "满意",
       "category": "non-keyword"
     },
     {
@@ -5012,7 +5721,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "等线",
+      "token": "等",
+      "category": "non-keyword"
+    },
+    {
+      "token": "线",
       "category": "non-keyword"
     },
     {
@@ -5024,15 +5737,23 @@
       "category": "non-keyword"
     },
     {
-      "token": "时为",
+      "token": "时",
       "category": "non-keyword"
     },
     {
-      "token": "您",
+      "token": "为",
+      "category": "non-keyword"
+    },
+    {
+      "token": "您提",
       "category": "non-keyword"
     },
     {
       "token": "提供",
+      "category": "non-keyword"
+    },
+    {
+      "token": "个性",
       "category": "non-keyword"
     },
     {
@@ -5092,6 +5813,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "数据",
+      "category": "keyword"
+    },
+    {
       "token": "数据项",
       "category": "non-keyword"
     },
@@ -5108,7 +5833,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "您",
+      "token": "您提",
       "category": "non-keyword"
     },
     {
@@ -5288,7 +6013,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "能感",
+      "category": "non-keyword"
+    },
+    {
+      "token": "感兴",
+      "category": "non-keyword"
+    },
+    {
       "token": "感兴趣",
+      "category": "non-keyword"
+    },
+    {
+      "token": "兴趣",
       "category": "non-keyword"
     },
     {
@@ -5432,6 +6169,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "关注",
+      "category": "non-keyword"
+    },
+    {
       "token": "关注点",
       "category": "non-keyword"
     },
@@ -5448,7 +6189,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "您",
+      "token": "您提",
       "category": "non-keyword"
     },
     {
@@ -5552,7 +6293,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "操作",
+      "category": "non-keyword"
+    },
+    {
       "token": "操作系统",
+      "category": "non-keyword"
+    },
+    {
+      "token": "系统",
       "category": "non-keyword"
     },
     {
@@ -5569,6 +6318,10 @@
     },
     {
       "token": "、",
+      "category": "non-keyword"
+    },
+    {
+      "token": "浏览",
       "category": "non-keyword"
     },
     {
@@ -5596,7 +6349,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "分辨",
+      "category": "non-keyword"
+    },
+    {
       "token": "分辨率",
+      "category": "non-keyword"
+    },
+    {
+      "token": "辨率",
       "category": "non-keyword"
     },
     {
@@ -5620,6 +6381,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "地址",
+      "category": "non-keyword"
+    },
+    {
       "token": "、",
       "category": "non-keyword"
     },
@@ -5628,7 +6393,23 @@
       "category": "non-keyword"
     },
     {
+      "token": "网络服务",
+      "category": "non-keyword"
+    },
+    {
+      "token": "服务",
+      "category": "non-keyword"
+    },
+    {
       "token": "服务提供商",
+      "category": "non-keyword"
+    },
+    {
+      "token": "提供",
+      "category": "non-keyword"
+    },
+    {
+      "token": "提供商",
       "category": "non-keyword"
     },
     {
@@ -5641,6 +6422,10 @@
     },
     {
       "token": "汇总",
+      "category": "non-keyword"
+    },
+    {
+      "token": "总分",
       "category": "non-keyword"
     },
     {
@@ -5660,7 +6445,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "等线",
+      "token": "等",
+      "category": "non-keyword"
+    },
+    {
+      "token": "线",
       "category": "non-keyword"
     },
     {
@@ -5688,8 +6477,20 @@
       "category": "non-keyword"
     },
     {
+      "token": "统计",
+      "category": "non-keyword"
+    },
+    {
       "token": "统计数据",
       "category": "non-keyword"
+    },
+    {
+      "token": "计数",
+      "category": "non-keyword"
+    },
+    {
+      "token": "数据",
+      "category": "keyword"
     },
     {
       "token": "，",
@@ -5733,6 +6534,10 @@
     },
     {
       "token": "不想",
+      "category": "non-keyword"
+    },
+    {
+      "token": "想接",
       "category": "non-keyword"
     },
     {
@@ -5860,6 +6665,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "送错",
+      "category": "non-keyword"
+    },
+    {
       "token": "错误",
       "category": "non-keyword"
     },
@@ -5876,11 +6685,15 @@
       "category": "non-keyword"
     },
     {
-      "token": "下",
+      "token": "下排",
       "category": "non-keyword"
     },
     {
       "token": "排查",
+      "category": "non-keyword"
+    },
+    {
+      "token": "查错",
       "category": "non-keyword"
     },
     {
@@ -5960,7 +6773,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "防损",
+      "token": "防",
+      "category": "non-keyword"
+    },
+    {
+      "token": "损",
       "category": "non-keyword"
     },
     {
@@ -6024,7 +6841,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "行业",
+      "category": "non-keyword"
+    },
+    {
       "token": "行业标准",
+      "category": "non-keyword"
+    },
+    {
+      "token": "标准",
       "category": "non-keyword"
     },
     {
@@ -6104,6 +6929,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "数据",
+      "category": "keyword"
+    },
+    {
       "token": "数据项",
       "category": "non-keyword"
     },
@@ -6156,6 +6985,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "客户",
+      "category": "non-keyword"
+    },
+    {
       "token": "客户端",
       "category": "non-keyword"
     },
@@ -6164,11 +6997,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "地址",
+      "category": "non-keyword"
+    },
+    {
       "token": "、",
       "category": "non-keyword"
     },
     {
       "token": "请求",
+      "category": "non-keyword"
+    },
+    {
+      "token": "求成",
       "category": "non-keyword"
     },
     {
@@ -6208,6 +7049,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "客户",
+      "category": "non-keyword"
+    },
+    {
       "token": "客户端",
       "category": "non-keyword"
     },
@@ -6240,7 +7085,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "操作",
+      "category": "non-keyword"
+    },
+    {
       "token": "操作系统",
+      "category": "non-keyword"
+    },
+    {
+      "token": "系统",
       "category": "non-keyword"
     },
     {
@@ -6269,6 +7122,10 @@
     },
     {
       "token": "法定",
+      "category": "non-keyword"
+    },
+    {
+      "token": "定义",
       "category": "non-keyword"
     },
     {
@@ -6328,7 +7185,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "和",
+      "token": "和服",
       "category": "non-keyword"
     },
     {
@@ -6376,7 +7233,15 @@
       "category": "non-keyword"
     },
     {
-      "token": "2.1",
+      "token": "2",
+      "category": "non-keyword"
+    },
+    {
+      "token": ".",
+      "category": "non-keyword"
+    },
+    {
+      "token": "1",
       "category": "non-keyword"
     },
     {
@@ -6416,7 +7281,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "会",
+      "token": "时会",
       "category": "non-keyword"
     },
     {
@@ -6424,7 +7289,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "计算",
+      "category": "non-keyword"
+    },
+    {
       "token": "计算机",
+      "category": "non-keyword"
+    },
+    {
+      "token": "算机",
       "category": "non-keyword"
     },
     {
@@ -6460,11 +7333,19 @@
       "category": "non-keyword"
     },
     {
-      "token": "小",
+      "token": "小数",
       "category": "non-keyword"
     },
     {
+      "token": "数据",
+      "category": "keyword"
+    },
+    {
       "token": "数据文件",
+      "category": "non-keyword"
+    },
+    {
+      "token": "文件",
       "category": "non-keyword"
     },
     {
@@ -6488,7 +7369,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "网络服务",
+      "category": "non-keyword"
+    },
+    {
+      "token": "服务",
+      "category": "non-keyword"
+    },
+    {
       "token": "服务器",
+      "category": "non-keyword"
+    },
+    {
+      "token": "务器",
       "category": "non-keyword"
     },
     {
@@ -6500,7 +7393,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "计算",
+      "category": "non-keyword"
+    },
+    {
       "token": "计算机",
+      "category": "non-keyword"
+    },
+    {
+      "token": "算机",
       "category": "non-keyword"
     },
     {
@@ -6528,7 +7429,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "文本",
+      "category": "non-keyword"
+    },
+    {
       "token": "文本文件",
+      "category": "non-keyword"
+    },
+    {
+      "token": "本文",
+      "category": "non-keyword"
+    },
+    {
+      "token": "文件",
       "category": "non-keyword"
     },
     {
@@ -6568,7 +7481,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "服务",
+      "category": "non-keyword"
+    },
+    {
       "token": "服务器",
+      "category": "non-keyword"
+    },
+    {
+      "token": "务器",
       "category": "non-keyword"
     },
     {
@@ -6612,6 +7533,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "浏览",
+      "category": "non-keyword"
+    },
+    {
       "token": "浏览器",
       "category": "non-keyword"
     },
@@ -6624,7 +7549,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "应用",
+      "category": "non-keyword"
+    },
+    {
       "token": "应用程序",
+      "category": "non-keyword"
+    },
+    {
+      "token": "程序",
       "category": "non-keyword"
     },
     {
@@ -6660,6 +7593,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "标识",
+      "category": "non-keyword"
+    },
+    {
       "token": "标识符",
       "category": "non-keyword"
     },
@@ -6669,6 +7606,10 @@
     },
     {
       "token": "站点",
+      "category": "non-keyword"
+    },
+    {
+      "token": "点名",
       "category": "non-keyword"
     },
     {
@@ -6700,7 +7641,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "借助",
+      "category": "non-keyword"
+    },
+    {
       "token": "借助于",
+      "category": "non-keyword"
+    },
+    {
+      "token": "助于",
       "category": "non-keyword"
     },
     {
@@ -6720,7 +7669,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "存储",
+      "category": "keyword"
+    },
+    {
       "token": "存储用户",
+      "category": "non-keyword"
+    },
+    {
+      "token": "用户",
       "category": "non-keyword"
     },
     {
@@ -6729,6 +7686,10 @@
     },
     {
       "token": "或",
+      "category": "non-keyword"
+    },
+    {
+      "token": "购物",
       "category": "non-keyword"
     },
     {
@@ -6784,7 +7745,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "大多",
+      "category": "non-keyword"
+    },
+    {
       "token": "大多数",
+      "category": "non-keyword"
+    },
+    {
+      "token": "多数",
       "category": "non-keyword"
     },
     {
@@ -6796,11 +7765,35 @@
       "category": "non-keyword"
     },
     {
+      "token": "互联",
+      "category": "non-keyword"
+    },
+    {
       "token": "互联网",
       "category": "non-keyword"
     },
     {
+      "token": "互联网服务",
+      "category": "non-keyword"
+    },
+    {
+      "token": "联网",
+      "category": "non-keyword"
+    },
+    {
+      "token": "服务",
+      "category": "non-keyword"
+    },
+    {
       "token": "服务提供商",
+      "category": "non-keyword"
+    },
+    {
+      "token": "提供",
+      "category": "non-keyword"
+    },
+    {
+      "token": "提供商",
       "category": "non-keyword"
     },
     {
@@ -6836,6 +7829,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "善用",
+      "category": "non-keyword"
+    },
+    {
       "token": "用户",
       "category": "non-keyword"
     },
@@ -6848,7 +7845,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "借助",
+      "category": "non-keyword"
+    },
+    {
       "token": "借助于",
+      "category": "non-keyword"
+    },
+    {
+      "token": "助于",
       "category": "non-keyword"
     },
     {
@@ -6872,6 +7877,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "住用",
+      "category": "non-keyword"
+    },
+    {
       "token": "用户",
       "category": "non-keyword"
     },
@@ -6888,6 +7897,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "访问",
+      "category": "non-keyword"
+    },
+    {
       "token": "（",
       "category": "non-keyword"
     },
@@ -6896,7 +7909,11 @@
       "category": "keyword"
     },
     {
-      "token": "会话",
+      "token": "会",
+      "category": "non-keyword"
+    },
+    {
+      "token": "话",
       "category": "non-keyword"
     },
     {
@@ -6913,6 +7930,10 @@
     },
     {
       "token": "多次",
+      "category": "non-keyword"
+    },
+    {
+      "token": "次访问",
       "category": "non-keyword"
     },
     {
@@ -6936,15 +7957,19 @@
       "category": "non-keyword"
     },
     {
-      "token": "）",
+      "token": "）。",
       "category": "non-keyword"
     },
     {
-      "token": "。",
+      "token": "借助",
       "category": "non-keyword"
     },
     {
       "token": "借助于",
+      "category": "non-keyword"
+    },
+    {
+      "token": "助于",
       "category": "non-keyword"
     },
     {
@@ -6980,7 +8005,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "计算",
+      "category": "non-keyword"
+    },
+    {
       "token": "计算机",
+      "category": "non-keyword"
+    },
+    {
+      "token": "算机",
       "category": "non-keyword"
     },
     {
@@ -7008,7 +8041,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "字体",
+      "category": "non-keyword"
+    },
+    {
       "token": "字体大小",
+      "category": "non-keyword"
+    },
+    {
+      "token": "大小",
       "category": "non-keyword"
     },
     {
@@ -7036,6 +8077,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "意味",
+      "category": "non-keyword"
+    },
+    {
       "token": "意味着",
       "category": "non-keyword"
     },
@@ -7060,6 +8105,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "次访问",
+      "category": "non-keyword"
+    },
+    {
       "token": "访问",
       "category": "non-keyword"
     },
@@ -7068,7 +8117,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "重新",
+      "category": "non-keyword"
+    },
+    {
       "token": "重新配置",
+      "category": "non-keyword"
+    },
+    {
+      "token": "配置",
       "category": "non-keyword"
     },
     {
@@ -7100,7 +8157,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "不",
+      "token": "不使",
       "category": "non-keyword"
     },
     {
@@ -7137,6 +8194,10 @@
     },
     {
       "token": "打开",
+      "category": "non-keyword"
+    },
+    {
+      "token": "开网",
       "category": "non-keyword"
     },
     {
@@ -7352,6 +8413,14 @@
       "category": "non-keyword"
     },
     {
+      "token": "何用",
+      "category": "non-keyword"
+    },
+    {
+      "token": "何用途",
+      "category": "non-keyword"
+    },
+    {
       "token": "用途",
       "category": "non-keyword"
     },
@@ -7416,11 +8485,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "计算",
+      "category": "non-keyword"
+    },
+    {
       "token": "计算机",
       "category": "non-keyword"
     },
     {
-      "token": "上",
+      "token": "算机",
+      "category": "non-keyword"
+    },
+    {
+      "token": "机上",
       "category": "non-keyword"
     },
     {
@@ -7444,11 +8521,27 @@
       "category": "non-keyword"
     },
     {
+      "token": "大部",
+      "category": "non-keyword"
+    },
+    {
       "token": "大部分",
       "category": "non-keyword"
     },
     {
+      "token": "部分",
+      "category": "non-keyword"
+    },
+    {
+      "token": "分网",
+      "category": "non-keyword"
+    },
+    {
       "token": "网络",
+      "category": "non-keyword"
+    },
+    {
+      "token": "浏览",
       "category": "non-keyword"
     },
     {
@@ -7528,6 +8621,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "次访问",
+      "category": "non-keyword"
+    },
+    {
       "token": "访问",
       "category": "non-keyword"
     },
@@ -7556,6 +8653,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "改用",
+      "category": "non-keyword"
+    },
+    {
       "token": "用户",
       "category": "non-keyword"
     },
@@ -7568,7 +8669,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "如需",
+      "token": "如",
+      "category": "non-keyword"
+    },
+    {
+      "token": "需",
       "category": "non-keyword"
     },
     {
@@ -7585,6 +8690,10 @@
     },
     {
       "token": "更改",
+      "category": "non-keyword"
+    },
+    {
+      "token": "浏览",
       "category": "non-keyword"
     },
     {
@@ -7652,7 +8761,15 @@
       "category": "non-keyword"
     },
     {
-      "token": "2.2",
+      "token": "2",
+      "category": "non-keyword"
+    },
+    {
+      "token": ".",
+      "category": "non-keyword"
+    },
+    {
+      "token": "2",
       "category": "non-keyword"
     },
     {
@@ -7696,7 +8813,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "还会",
+      "token": "还",
+      "category": "non-keyword"
+    },
+    {
+      "token": "会",
       "category": "non-keyword"
     },
     {
@@ -7708,7 +8829,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "上",
+      "token": "站上",
       "category": "non-keyword"
     },
     {
@@ -7784,7 +8905,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "电子",
+      "category": "non-keyword"
+    },
+    {
       "token": "电子邮件",
+      "category": "non-keyword"
+    },
+    {
+      "token": "邮件",
       "category": "non-keyword"
     },
     {
@@ -7809,6 +8938,10 @@
     },
     {
       "token": "网站",
+      "category": "non-keyword"
+    },
+    {
+      "token": "站内",
       "category": "non-keyword"
     },
     {
@@ -7908,7 +9041,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "和",
+      "token": "和服",
       "category": "non-keyword"
     },
     {
@@ -7928,7 +9061,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "客户",
+      "category": "non-keyword"
+    },
+    {
       "token": "客户服务",
+      "category": "non-keyword"
+    },
+    {
+      "token": "服务",
       "category": "non-keyword"
     },
     {
@@ -7972,6 +9113,18 @@
       "category": "non-keyword"
     },
     {
+      "token": "电子",
+      "category": "non-keyword"
+    },
+    {
+      "token": "电子邮件",
+      "category": "non-keyword"
+    },
+    {
+      "token": "邮件",
+      "category": "non-keyword"
+    },
+    {
       "token": "中",
       "category": "non-keyword"
     },
@@ -7984,6 +9137,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "透明图",
+      "category": "non-keyword"
+    },
+    {
       "token": "图像",
       "category": "non-keyword"
     },
@@ -7992,11 +9149,27 @@
       "category": "non-keyword"
     },
     {
+      "token": "借助",
+      "category": "non-keyword"
+    },
+    {
       "token": "借助于",
       "category": "non-keyword"
     },
     {
+      "token": "助于",
+      "category": "non-keyword"
+    },
+    {
+      "token": "电子",
+      "category": "non-keyword"
+    },
+    {
       "token": "电子邮件",
+      "category": "non-keyword"
+    },
+    {
+      "token": "邮件",
       "category": "non-keyword"
     },
     {
@@ -8032,7 +9205,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "电子",
+      "category": "non-keyword"
+    },
+    {
       "token": "电子邮件",
+      "category": "non-keyword"
+    },
+    {
+      "token": "邮件",
       "category": "non-keyword"
     },
     {
@@ -8168,6 +9349,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "意味",
+      "category": "non-keyword"
+    },
+    {
       "token": "意味着",
       "category": "non-keyword"
     },
@@ -8184,7 +9369,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "如上",
+      "category": "non-keyword"
+    },
+    {
       "token": "如上所述",
+      "category": "non-keyword"
+    },
+    {
+      "token": "所述",
       "category": "non-keyword"
     },
     {
@@ -8252,8 +9445,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "通常",
@@ -8284,8 +9485,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "，",
@@ -8297,6 +9506,10 @@
     },
     {
       "token": "以下",
+      "category": "non-keyword"
+    },
+    {
+      "token": "下场",
       "category": "non-keyword"
     },
     {
@@ -8352,7 +9565,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "合作",
+      "category": "non-keyword"
+    },
+    {
       "token": "合作伙伴",
+      "category": "non-keyword"
+    },
+    {
+      "token": "伙伴",
       "category": "non-keyword"
     },
     {
@@ -8384,7 +9605,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "如本",
+      "token": "如",
+      "category": "non-keyword"
+    },
+    {
+      "token": "本",
       "category": "non-keyword"
     },
     {
@@ -8404,7 +9629,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "合作",
+      "category": "non-keyword"
+    },
+    {
       "token": "合作伙伴",
+      "category": "non-keyword"
+    },
+    {
+      "token": "伙伴",
       "category": "non-keyword"
     },
     {
@@ -8420,8 +9653,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "。",
@@ -8440,7 +9681,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "合作",
+      "category": "non-keyword"
+    },
+    {
       "token": "合作伙伴",
+      "category": "non-keyword"
+    },
+    {
+      "token": "伙伴",
       "category": "non-keyword"
     },
     {
@@ -8468,7 +9717,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "送电",
+      "category": "non-keyword"
+    },
+    {
+      "token": "电子",
+      "category": "non-keyword"
+    },
+    {
       "token": "电子邮件",
+      "category": "non-keyword"
+    },
+    {
+      "token": "邮件",
       "category": "non-keyword"
     },
     {
@@ -8480,7 +9741,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "技术",
+      "category": "non-keyword"
+    },
+    {
       "token": "技术支持",
+      "category": "non-keyword"
+    },
+    {
+      "token": "支持",
       "category": "non-keyword"
     },
     {
@@ -8504,11 +9773,23 @@
       "category": "non-keyword"
     },
     {
+      "token": "合作",
+      "category": "non-keyword"
+    },
+    {
       "token": "合作伙伴",
       "category": "non-keyword"
     },
     {
-      "token": "仅能",
+      "token": "伙伴",
+      "category": "non-keyword"
+    },
+    {
+      "token": "仅",
+      "category": "non-keyword"
+    },
+    {
+      "token": "能",
       "category": "non-keyword"
     },
     {
@@ -8524,8 +9805,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "用于",
@@ -8544,7 +9833,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "您",
+      "token": "您提",
       "category": "non-keyword"
     },
     {
@@ -8608,8 +9897,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "，",
@@ -8620,7 +9917,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "仅会",
+      "token": "仅",
+      "category": "non-keyword"
+    },
+    {
+      "token": "会",
       "category": "non-keyword"
     },
     {
@@ -8704,7 +10005,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "只会",
+      "token": "只",
+      "category": "non-keyword"
+    },
+    {
+      "token": "会",
       "category": "non-keyword"
     },
     {
@@ -8796,7 +10101,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "对拟",
+      "token": "对",
+      "category": "non-keyword"
+    },
+    {
+      "token": "拟",
       "category": "non-keyword"
     },
     {
@@ -8813,6 +10122,10 @@
     },
     {
       "token": "进行",
+      "category": "non-keyword"
+    },
+    {
+      "token": "唯一",
       "category": "non-keyword"
     },
     {
@@ -8920,7 +10233,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "执法",
+      "category": "non-keyword"
+    },
+    {
       "token": "执法机关",
+      "category": "non-keyword"
+    },
+    {
+      "token": "机关",
       "category": "non-keyword"
     },
     {
@@ -8952,8 +10273,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "。",
@@ -8968,7 +10297,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "管辖",
+      "category": "non-keyword"
+    },
+    {
       "token": "管辖区",
+      "category": "non-keyword"
+    },
+    {
+      "token": "辖区",
       "category": "non-keyword"
     },
     {
@@ -8981,6 +10318,10 @@
     },
     {
       "token": "华为",
+      "category": "non-keyword"
+    },
+    {
+      "token": "牵涉",
       "category": "non-keyword"
     },
     {
@@ -9036,8 +10377,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "还",
@@ -9092,7 +10441,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "还会",
+      "token": "还",
+      "category": "non-keyword"
+    },
+    {
+      "token": "会",
       "category": "non-keyword"
     },
     {
@@ -9192,7 +10545,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "财产",
+      "category": "non-keyword"
+    },
+    {
       "token": "财产损失",
+      "category": "non-keyword"
+    },
+    {
+      "token": "损失",
       "category": "non-keyword"
     },
     {
@@ -9224,7 +10585,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "非法",
+      "category": "non-keyword"
+    },
+    {
       "token": "非法行为",
+      "category": "non-keyword"
+    },
+    {
+      "token": "行为",
       "category": "non-keyword"
     },
     {
@@ -9284,7 +10653,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人信息",
+      "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
+    },
+    {
       "token": "信息处理",
+      "category": "non-keyword"
+    },
+    {
+      "token": "处理",
       "category": "non-keyword"
     },
     {
@@ -9328,15 +10709,35 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "都",
       "category": "non-keyword"
     },
     {
+      "token": "准确",
+      "category": "non-keyword"
+    },
+    {
       "token": "准确无误",
+      "category": "non-keyword"
+    },
+    {
+      "token": "确无",
+      "category": "non-keyword"
+    },
+    {
+      "token": "无误",
       "category": "non-keyword"
     },
     {
@@ -9360,8 +10761,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "的",
@@ -9512,15 +10921,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
     },
     {
-      "token": "；",
+      "token": "信息",
       "category": "non-keyword"
     },
     {
-      "token": "（",
+      "token": "；（",
       "category": "non-keyword"
     },
     {
@@ -9560,7 +10973,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "不",
+      "token": "不准",
       "category": "non-keyword"
     },
     {
@@ -9572,15 +10985,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
     },
     {
-      "token": "；",
+      "token": "信息",
       "category": "non-keyword"
     },
     {
-      "token": "（",
+      "token": "；（",
       "category": "non-keyword"
     },
     {
@@ -9620,15 +11037,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
     },
     {
-      "token": "；",
+      "token": "信息",
       "category": "non-keyword"
     },
     {
-      "token": "（",
+      "token": "；（",
       "category": "non-keyword"
     },
     {
@@ -9660,15 +11081,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
     },
     {
-      "token": "；",
+      "token": "信息",
       "category": "non-keyword"
     },
     {
-      "token": "（",
+      "token": "；（",
       "category": "non-keyword"
     },
     {
@@ -9696,7 +11121,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人信息",
+      "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
+    },
+    {
       "token": "信息处理",
+      "category": "non-keyword"
+    },
+    {
+      "token": "处理",
       "category": "non-keyword"
     },
     {
@@ -9764,6 +11201,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "处在",
+      "category": "non-keyword"
+    },
+    {
       "token": "在线",
       "category": "non-keyword"
     },
@@ -9772,7 +11213,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "给",
+      "token": "馈给",
       "category": "non-keyword"
     },
     {
@@ -9820,6 +11261,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "面请",
+      "category": "non-keyword"
+    },
+    {
       "token": "请求",
       "category": "non-keyword"
     },
@@ -9864,7 +11309,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人身份",
+      "category": "non-keyword"
+    },
+    {
+      "token": "人身",
+      "category": "non-keyword"
+    },
+    {
+      "token": "身份",
       "category": "non-keyword"
     },
     {
@@ -9908,6 +11365,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "欺骗",
+      "category": "non-keyword"
+    },
+    {
       "token": "欺骗性",
       "category": "non-keyword"
     },
@@ -9936,6 +11397,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "隐私",
+      "category": "keyword"
+    },
+    {
       "token": "隐私权",
       "category": "non-keyword"
     },
@@ -9957,6 +11422,10 @@
     },
     {
       "token": "拒绝",
+      "category": "non-keyword"
+    },
+    {
+      "token": "绝处",
       "category": "non-keyword"
     },
     {
@@ -10044,8 +11513,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "时",
@@ -10060,7 +11537,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "还",
+      "token": "还有",
       "category": "non-keyword"
     },
     {
@@ -10148,11 +11625,23 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
     },
     {
+      "token": "信息",
+      "category": "non-keyword"
+    },
+    {
       "token": "的",
+      "category": "non-keyword"
+    },
+    {
+      "token": "合法",
       "category": "non-keyword"
     },
     {
@@ -10204,6 +11693,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "正当",
+      "category": "non-keyword"
+    },
+    {
       "token": "正当性",
       "category": "non-keyword"
     },
@@ -10224,8 +11717,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "。",
@@ -10268,11 +11769,23 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
     },
     {
+      "token": "信息",
+      "category": "non-keyword"
+    },
+    {
       "token": "华为",
+      "category": "non-keyword"
+    },
+    {
+      "token": "为重",
       "category": "non-keyword"
     },
     {
@@ -10280,8 +11793,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "的",
@@ -10356,8 +11877,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "不",
@@ -10444,7 +11973,19 @@
       "category": "keyword"
     },
     {
+      "token": "加密",
+      "category": "non-keyword"
+    },
+    {
       "token": "加密技术",
+      "category": "non-keyword"
+    },
+    {
+      "token": "密技",
+      "category": "non-keyword"
+    },
+    {
+      "token": "技术",
       "category": "non-keyword"
     },
     {
@@ -10457,6 +11998,10 @@
     },
     {
       "token": "的",
+      "category": "non-keyword"
+    },
+    {
+      "token": "机密",
       "category": "non-keyword"
     },
     {
@@ -10524,7 +12069,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "访问",
+      "category": "non-keyword"
+    },
+    {
       "token": "访问控制",
+      "category": "non-keyword"
+    },
+    {
+      "token": "控制",
+      "category": "non-keyword"
+    },
+    {
+      "token": "控制机",
       "category": "non-keyword"
     },
     {
@@ -10548,6 +12105,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "授权人",
+      "category": "non-keyword"
+    },
+    {
       "token": "人员",
       "category": "non-keyword"
     },
@@ -10564,8 +12125,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "；",
@@ -10632,8 +12201,20 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
+    },
+    {
+      "token": "重要",
+      "category": "non-keyword"
     },
     {
       "token": "重要性",
@@ -10664,6 +12245,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "力保",
+      "category": "non-keyword"
+    },
+    {
       "token": "保护",
       "category": "non-keyword"
     },
@@ -10676,8 +12261,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "，",
@@ -10700,7 +12293,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "安全",
+      "category": "non-keyword"
+    },
+    {
       "token": "安全措施",
+      "category": "non-keyword"
+    },
+    {
+      "token": "措施",
       "category": "non-keyword"
     },
     {
@@ -10728,7 +12329,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "将会",
+      "token": "将",
+      "category": "non-keyword"
+    },
+    {
+      "token": "会",
       "category": "non-keyword"
     },
     {
@@ -10736,7 +12341,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "达",
+      "token": "达成",
       "category": "non-keyword"
     },
     {
@@ -10756,15 +12361,15 @@
       "category": "non-keyword"
     },
     {
-      "token": "所",
-      "category": "non-keyword"
-    },
-    {
-      "token": "需",
+      "token": "所需",
       "category": "non-keyword"
     },
     {
       "token": "的",
+      "category": "non-keyword"
+    },
+    {
+      "token": "期限",
       "category": "non-keyword"
     },
     {
@@ -10784,8 +12389,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "，",
@@ -10812,7 +12425,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "可",
+      "token": "许可",
       "category": "non-keyword"
     },
     {
@@ -10928,7 +12541,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "有所",
+      "category": "non-keyword"
+    },
+    {
       "token": "有所不同",
+      "category": "non-keyword"
+    },
+    {
+      "token": "不同",
       "category": "non-keyword"
     },
     {
@@ -10945,6 +12566,10 @@
     },
     {
       "token": "确定",
+      "category": "non-keyword"
+    },
+    {
+      "token": "定存",
       "category": "non-keyword"
     },
     {
@@ -10996,8 +12621,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "的",
@@ -11024,7 +12657,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "和",
+      "token": "和服",
       "category": "non-keyword"
     },
     {
@@ -11072,7 +12705,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "并",
+      "token": "并提",
       "category": "non-keyword"
     },
     {
@@ -11092,6 +12725,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "服务性",
+      "category": "non-keyword"
+    },
+    {
       "token": "性能",
       "category": "non-keyword"
     },
@@ -11108,7 +12745,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "保证",
+      "category": "non-keyword"
+    },
+    {
       "token": "保证系统",
+      "category": "non-keyword"
+    },
+    {
+      "token": "系统",
       "category": "non-keyword"
     },
     {
@@ -11120,7 +12765,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "和",
+      "token": "和服",
       "category": "non-keyword"
     },
     {
@@ -11200,7 +12845,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "更长",
+      "token": "更",
+      "category": "non-keyword"
+    },
+    {
+      "token": "长",
       "category": "non-keyword"
     },
     {
@@ -11209,6 +12858,10 @@
     },
     {
       "token": "留存",
+      "category": "non-keyword"
+    },
+    {
+      "token": "存期",
       "category": "non-keyword"
     },
     {
@@ -11232,7 +12885,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "等",
+      "token": "同等",
       "category": "non-keyword"
     },
     {
@@ -11256,7 +12909,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "特殊",
+      "category": "non-keyword"
+    },
+    {
       "token": "特殊要求",
+      "category": "non-keyword"
+    },
+    {
+      "token": "要求",
       "category": "non-keyword"
     },
     {
@@ -11292,7 +12953,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "您",
+      "token": "您提",
       "category": "non-keyword"
     },
     {
@@ -11301,6 +12962,10 @@
     },
     {
       "token": "服务",
+      "category": "non-keyword"
+    },
+    {
+      "token": "务必",
       "category": "non-keyword"
     },
     {
@@ -11396,6 +13061,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "销账",
+      "category": "non-keyword"
+    },
+    {
       "token": "账号",
       "category": "non-keyword"
     },
@@ -11440,7 +13109,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "和",
+      "token": "和服",
       "category": "non-keyword"
     },
     {
@@ -11508,8 +13177,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "或",
@@ -11532,7 +13209,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "化",
+      "token": "化处",
       "category": "non-keyword"
     },
     {
@@ -11560,6 +13237,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "何处",
+      "category": "non-keyword"
+    },
+    {
       "token": "处理",
       "category": "non-keyword"
     },
@@ -11572,8 +13253,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "我们",
@@ -11596,7 +13285,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "和",
+      "token": "和服",
       "category": "non-keyword"
     },
     {
@@ -11636,7 +13325,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "监护",
+      "category": "non-keyword"
+    },
+    {
       "token": "监护人",
+      "category": "non-keyword"
+    },
+    {
+      "token": "护人",
       "category": "non-keyword"
     },
     {
@@ -11676,7 +13373,23 @@
       "category": "non-keyword"
     },
     {
+      "token": "未成",
+      "category": "non-keyword"
+    },
+    {
+      "token": "未成年",
+      "category": "non-keyword"
+    },
+    {
       "token": "未成年人",
+      "category": "non-keyword"
+    },
+    {
+      "token": "成年",
+      "category": "non-keyword"
+    },
+    {
+      "token": "成年人",
       "category": "non-keyword"
     },
     {
@@ -11740,8 +13453,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "的",
@@ -11760,7 +13481,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "只会",
+      "token": "只",
+      "category": "non-keyword"
+    },
+    {
+      "token": "会",
       "category": "non-keyword"
     },
     {
@@ -11792,7 +13517,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "监护",
+      "category": "non-keyword"
+    },
+    {
       "token": "监护人",
+      "category": "non-keyword"
+    },
+    {
+      "token": "护人",
       "category": "non-keyword"
     },
     {
@@ -11868,7 +13601,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "发现",
+      "category": "non-keyword"
+    },
+    {
       "token": "发现自己",
+      "category": "non-keyword"
+    },
+    {
+      "token": "自己",
       "category": "non-keyword"
     },
     {
@@ -11889,6 +13630,10 @@
     },
     {
       "token": "可证实",
+      "category": "non-keyword"
+    },
+    {
+      "token": "证实",
       "category": "non-keyword"
     },
     {
@@ -11932,8 +13677,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "，",
@@ -11953,6 +13706,10 @@
     },
     {
       "token": "尽快",
+      "category": "non-keyword"
+    },
+    {
+      "token": "快删",
       "category": "non-keyword"
     },
     {
@@ -11980,7 +13737,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "第三",
+      "category": "non-keyword"
+    },
+    {
       "token": "第三方",
+      "category": "non-keyword"
+    },
+    {
+      "token": "三方",
+      "category": "non-keyword"
+    },
+    {
+      "token": "提供",
       "category": "non-keyword"
     },
     {
@@ -12040,6 +13809,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "到来",
+      "category": "non-keyword"
+    },
+    {
       "token": "来自",
       "category": "non-keyword"
     },
@@ -12052,7 +13825,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "合作",
+      "category": "non-keyword"
+    },
+    {
       "token": "合作伙伴",
+      "category": "non-keyword"
+    },
+    {
+      "token": "伙伴",
       "category": "non-keyword"
     },
     {
@@ -12064,7 +13845,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "第三",
+      "category": "non-keyword"
+    },
+    {
       "token": "第三方",
+      "category": "non-keyword"
+    },
+    {
+      "token": "三方",
       "category": "non-keyword"
     },
     {
@@ -12076,6 +13865,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "文简",
+      "category": "non-keyword"
+    },
+    {
       "token": "简称",
       "category": "non-keyword"
     },
@@ -12084,15 +13877,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "第三",
+      "category": "non-keyword"
+    },
+    {
       "token": "第三方",
       "category": "non-keyword"
     },
     {
-      "token": "”",
+      "token": "三方",
       "category": "non-keyword"
     },
     {
-      "token": "）",
+      "token": "”）",
       "category": "non-keyword"
     },
     {
@@ -12128,7 +13925,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "对",
+      "token": "对此",
       "category": "non-keyword"
     },
     {
@@ -12136,11 +13933,23 @@
       "category": "non-keyword"
     },
     {
+      "token": "第三",
+      "category": "non-keyword"
+    },
+    {
       "token": "第三方",
       "category": "non-keyword"
     },
     {
+      "token": "三方",
+      "category": "non-keyword"
+    },
+    {
       "token": "无",
+      "category": "non-keyword"
+    },
+    {
+      "token": "控制",
       "category": "non-keyword"
     },
     {
@@ -12156,7 +13965,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "可",
+      "token": "可选",
       "category": "non-keyword"
     },
     {
@@ -12172,7 +13981,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "第三",
+      "category": "non-keyword"
+    },
+    {
       "token": "第三方",
+      "category": "non-keyword"
+    },
+    {
+      "token": "三方",
       "category": "non-keyword"
     },
     {
@@ -12204,7 +14021,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "和",
+      "token": "和服",
       "category": "non-keyword"
     },
     {
@@ -12220,11 +14037,27 @@
       "category": "non-keyword"
     },
     {
+      "token": "无法",
+      "category": "non-keyword"
+    },
+    {
       "token": "无法控制",
       "category": "non-keyword"
     },
     {
+      "token": "控制",
+      "category": "non-keyword"
+    },
+    {
+      "token": "第三",
+      "category": "non-keyword"
+    },
+    {
       "token": "第三方",
+      "category": "non-keyword"
+    },
+    {
+      "token": "三方",
       "category": "non-keyword"
     },
     {
@@ -12240,7 +14073,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "数据",
+      "category": "keyword"
+    },
+    {
       "token": "数据保护",
+      "category": "non-keyword"
+    },
+    {
+      "token": "保护",
       "category": "non-keyword"
     },
     {
@@ -12256,11 +14097,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "第三",
+      "category": "non-keyword"
+    },
+    {
       "token": "第三方",
       "category": "non-keyword"
     },
     {
-      "token": "不",
+      "token": "三方",
+      "category": "non-keyword"
+    },
+    {
+      "token": "不受",
       "category": "non-keyword"
     },
     {
@@ -12296,7 +14145,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "第三",
+      "category": "non-keyword"
+    },
+    {
       "token": "第三方",
+      "category": "non-keyword"
+    },
+    {
+      "token": "三方",
       "category": "non-keyword"
     },
     {
@@ -12304,8 +14161,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "之前",
@@ -12328,7 +14193,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "第三",
+      "category": "non-keyword"
+    },
+    {
       "token": "第三方",
+      "category": "non-keyword"
+    },
+    {
+      "token": "三方",
       "category": "non-keyword"
     },
     {
@@ -12368,15 +14241,23 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "如何",
       "category": "non-keyword"
     },
     {
-      "token": "在",
+      "token": "何在",
       "category": "non-keyword"
     },
     {
@@ -12404,7 +14285,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "跨国",
+      "category": "non-keyword"
+    },
+    {
       "token": "跨国公司",
+      "category": "non-keyword"
+    },
+    {
+      "token": "国公",
+      "category": "non-keyword"
+    },
+    {
+      "token": "公司",
       "category": "non-keyword"
     },
     {
@@ -12413,6 +14306,10 @@
     },
     {
       "token": "这",
+      "category": "non-keyword"
+    },
+    {
+      "token": "意味",
       "category": "non-keyword"
     },
     {
@@ -12444,8 +14341,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "可能",
@@ -12481,6 +14386,10 @@
     },
     {
       "token": "所在",
+      "category": "non-keyword"
+    },
+    {
+      "token": "所在国",
       "category": "non-keyword"
     },
     {
@@ -12532,11 +14441,27 @@
       "category": "non-keyword"
     },
     {
+      "token": "公司",
+      "category": "non-keyword"
+    },
+    {
       "token": "或",
       "category": "non-keyword"
     },
     {
+      "token": "服务",
+      "category": "non-keyword"
+    },
+    {
       "token": "服务提供商",
+      "category": "non-keyword"
+    },
+    {
+      "token": "提供",
+      "category": "non-keyword"
+    },
+    {
+      "token": "提供商",
       "category": "non-keyword"
     },
     {
@@ -12548,11 +14473,23 @@
       "category": "non-keyword"
     },
     {
+      "token": "合作",
+      "category": "non-keyword"
+    },
+    {
       "token": "合作伙伴",
       "category": "non-keyword"
     },
     {
+      "token": "伙伴",
+      "category": "non-keyword"
+    },
+    {
       "token": "设有",
+      "category": "non-keyword"
+    },
+    {
+      "token": "有机",
       "category": "non-keyword"
     },
     {
@@ -12565,6 +14502,10 @@
     },
     {
       "token": "其他",
+      "category": "non-keyword"
+    },
+    {
+      "token": "他国",
       "category": "non-keyword"
     },
     {
@@ -12597,6 +14538,10 @@
     },
     {
       "token": "受到",
+      "category": "non-keyword"
+    },
+    {
+      "token": "到来",
       "category": "non-keyword"
     },
     {
@@ -12652,11 +14597,23 @@
       "category": "non-keyword"
     },
     {
+      "token": "数据",
+      "category": "keyword"
+    },
+    {
       "token": "数据保护",
       "category": "non-keyword"
     },
     {
-      "token": "法",
+      "token": "保护",
+      "category": "non-keyword"
+    },
+    {
+      "token": "保护法",
+      "category": "non-keyword"
+    },
+    {
+      "token": "护法",
       "category": "non-keyword"
     },
     {
@@ -12676,7 +14633,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "此类",
+      "category": "non-keyword"
+    },
+    {
       "token": "此类情况",
+      "category": "non-keyword"
+    },
+    {
+      "token": "情况",
       "category": "non-keyword"
     },
     {
@@ -12696,7 +14661,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "采取",
+      "category": "non-keyword"
+    },
+    {
       "token": "采取措施",
+      "category": "non-keyword"
+    },
+    {
+      "token": "措施",
       "category": "non-keyword"
     },
     {
@@ -12736,7 +14709,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "适用",
+      "category": "non-keyword"
+    },
+    {
       "token": "适用法律",
+      "category": "non-keyword"
+    },
+    {
+      "token": "用法",
+      "category": "non-keyword"
+    },
+    {
+      "token": "法律",
       "category": "non-keyword"
     },
     {
@@ -12745,6 +14730,10 @@
     },
     {
       "token": "要求",
+      "category": "non-keyword"
+    },
+    {
+      "token": "求进",
       "category": "non-keyword"
     },
     {
@@ -12792,8 +14781,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "被",
@@ -12804,7 +14801,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "至",
+      "token": "移至",
       "category": "non-keyword"
     },
     {
@@ -12832,7 +14829,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "数据",
+      "category": "keyword"
+    },
+    {
       "token": "数据保护",
+      "category": "non-keyword"
+    },
+    {
+      "token": "保护",
       "category": "non-keyword"
     },
     {
@@ -12896,7 +14901,23 @@
       "category": "non-keyword"
     },
     {
+      "token": "欧盟",
+      "category": "non-keyword"
+    },
+    {
       "token": "欧盟委员会",
+      "category": "non-keyword"
+    },
+    {
+      "token": "盟委",
+      "category": "non-keyword"
+    },
+    {
+      "token": "委员",
+      "category": "non-keyword"
+    },
+    {
+      "token": "委员会",
       "category": "non-keyword"
     },
     {
@@ -12912,8 +14933,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "合同",
+      "category": "non-keyword"
+    },
+    {
       "token": "合同条款",
       "category": "non-keyword"
+    },
+    {
+      "token": "条款",
+      "category": "keyword"
     },
     {
       "token": "或",
@@ -12940,8 +14969,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "的",
@@ -13040,8 +15077,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "合同",
+      "category": "non-keyword"
+    },
+    {
       "token": "合同条款",
       "category": "non-keyword"
+    },
+    {
+      "token": "条款",
+      "category": "keyword"
     },
     {
       "token": "的",
@@ -13064,7 +15109,39 @@
       "category": "non-keyword"
     },
     {
+      "token": "中华",
+      "category": "non-keyword"
+    },
+    {
+      "token": "中华人民",
+      "category": "non-keyword"
+    },
+    {
       "token": "中华人民共和国",
+      "category": "non-keyword"
+    },
+    {
+      "token": "华人",
+      "category": "non-keyword"
+    },
+    {
+      "token": "人民",
+      "category": "non-keyword"
+    },
+    {
+      "token": "人民共和国",
+      "category": "non-keyword"
+    },
+    {
+      "token": "共和",
+      "category": "non-keyword"
+    },
+    {
+      "token": "共和国",
+      "category": "non-keyword"
+    },
+    {
+      "token": "国境",
       "category": "non-keyword"
     },
     {
@@ -13096,8 +15173,16 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人",
+      "category": "non-keyword"
+    },
+    {
       "token": "个人信息",
       "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
     },
     {
       "token": "，",
@@ -13116,7 +15201,39 @@
       "category": "non-keyword"
     },
     {
+      "token": "中华",
+      "category": "non-keyword"
+    },
+    {
+      "token": "中华人民",
+      "category": "non-keyword"
+    },
+    {
       "token": "中华人民共和国",
+      "category": "non-keyword"
+    },
+    {
+      "token": "华人",
+      "category": "non-keyword"
+    },
+    {
+      "token": "人民",
+      "category": "non-keyword"
+    },
+    {
+      "token": "人民共和国",
+      "category": "non-keyword"
+    },
+    {
+      "token": "共和",
+      "category": "non-keyword"
+    },
+    {
+      "token": "共和国",
+      "category": "non-keyword"
+    },
+    {
+      "token": "国境",
       "category": "non-keyword"
     },
     {
@@ -13236,7 +15353,15 @@
       "category": "non-keyword"
     },
     {
+      "token": "最新",
+      "category": "non-keyword"
+    },
+    {
       "token": "最新版",
+      "category": "non-keyword"
+    },
+    {
+      "token": "新版",
       "category": "non-keyword"
     },
     {
@@ -13245,6 +15370,10 @@
     },
     {
       "token": "政策",
+      "category": "non-keyword"
+    },
+    {
+      "token": "策发",
       "category": "non-keyword"
     },
     {
@@ -13296,6 +15425,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "大变",
+      "category": "non-keyword"
+    },
+    {
       "token": "变更",
       "category": "non-keyword"
     },
@@ -13316,7 +15449,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "会",
+      "token": "会通",
       "category": "non-keyword"
     },
     {
@@ -13380,7 +15513,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "上",
+      "token": "站上",
       "category": "non-keyword"
     },
     {
@@ -13488,7 +15621,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "为数",
+      "category": "non-keyword"
+    },
+    {
+      "token": "数据",
+      "category": "keyword"
+    },
+    {
       "token": "数据保护",
+      "category": "non-keyword"
+    },
+    {
+      "token": "保护",
       "category": "non-keyword"
     },
     {
@@ -13544,7 +15689,23 @@
       "category": "non-keyword"
     },
     {
+      "token": "十五",
+      "category": "non-keyword"
+    },
+    {
       "token": "十五个",
+      "category": "non-keyword"
+    },
+    {
+      "token": "五个",
+      "category": "non-keyword"
+    },
+    {
+      "token": "工作",
+      "category": "non-keyword"
+    },
+    {
+      "token": "工作日",
       "category": "non-keyword"
     },
     {
@@ -13584,7 +15745,7 @@
       "category": "non-keyword"
     },
     {
-      "token": "不",
+      "token": "不满",
       "category": "non-keyword"
     },
     {
@@ -13616,7 +15777,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "个人信息",
+      "category": "keyword"
+    },
+    {
+      "token": "信息",
+      "category": "non-keyword"
+    },
+    {
       "token": "信息处理",
+      "category": "non-keyword"
+    },
+    {
+      "token": "处理",
       "category": "non-keyword"
     },
     {
@@ -13640,7 +15813,23 @@
       "category": "non-keyword"
     },
     {
+      "token": "合法",
+      "category": "non-keyword"
+    },
+    {
+      "token": "合法权",
+      "category": "non-keyword"
+    },
+    {
       "token": "合法权益",
+      "category": "non-keyword"
+    },
+    {
+      "token": "法权",
+      "category": "non-keyword"
+    },
+    {
+      "token": "权益",
       "category": "non-keyword"
     },
     {
@@ -13664,7 +15853,11 @@
       "category": "non-keyword"
     },
     {
-      "token": "网信",
+      "token": "网",
+      "category": "non-keyword"
+    },
+    {
+      "token": "信",
       "category": "non-keyword"
     },
     {
@@ -13696,7 +15889,19 @@
       "category": "non-keyword"
     },
     {
+      "token": "监管",
+      "category": "non-keyword"
+    },
+    {
+      "token": "监管部",
+      "category": "non-keyword"
+    },
+    {
       "token": "监管部门",
+      "category": "non-keyword"
+    },
+    {
+      "token": "部门",
       "category": "non-keyword"
     },
     {
@@ -13728,6 +15933,10 @@
       "category": "non-keyword"
     },
     {
+      "token": "新日",
+      "category": "non-keyword"
+    },
+    {
       "token": "日期",
       "category": "non-keyword"
     },
@@ -13753,15 +15962,16 @@
     }
   ],
   "keyword_counts": {
-    "隐私": 14,
-    "个人信息": 55,
+    "隐私": 15,
+    "个人信息": 61,
     "收集": 24,
-    "数据": 24,
+    "数据": 37,
     "使用": 31,
-    "存储": 5,
-    "共享": 1
+    "存储": 6,
+    "共享": 1,
+    "条款": 2
   },
-  "average_confidence": 0.7899350649350649,
-  "total_keywords": 154,
+  "average_confidence": 0.7819209039548022,
+  "total_keywords": 177,
   "advice": "高风险：文本包含大量隐私条款要素，建议法务审查"
 }
