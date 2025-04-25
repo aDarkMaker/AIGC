@@ -1,15 +1,27 @@
-import chromadb
-import os
 import yaml
+from pathlib import Path
+import chromadb
 
 class VectorDBManager:
-    def __init__(self, config_path="./config/settings.yaml"):
-        with open(config_path) as f:
-            config = yaml.safe_load(f)
+    def __init__(self):
+        # 获取vivo_rag_system包的根目录
+        package_root = Path(__file__).parent.parent.parent
+        config_path = package_root / "config" / "settings.yaml"
+        
+        with open(config_path, 'r', encoding='utf-8') as f:
+            self.config = yaml.safe_load(f)
+            
+        storage_config = self.config.get('storage', {})
+        db_path = storage_config.get('vector_db_path', './data/vector_store/chroma_db')
+        knowledge_base = storage_config.get('knowledge_base', './data/knowledge_base')
+        
+        # 将相对路径转换为绝对路径
+        self.db_path = str(package_root / db_path.lstrip('./'))  # 转换为字符串
+        self.knowledge_base = str(package_root / knowledge_base.lstrip('./'))  # 转换为字符串
         
         # 新版客户端配置（持久化版本）
         self.client = chromadb.PersistentClient(
-            path=config['storage']['vector_db_path']  # 直接使用配置文件中的路径
+            path=self.db_path  # 使用字符串类型的路径
         )
         
         # 创建/获取集合（新增embedding_function参数）

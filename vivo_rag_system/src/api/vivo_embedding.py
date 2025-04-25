@@ -3,19 +3,28 @@ import yaml
 from ..utils.auth_util import gen_sign_headers
 import os
 import json
+from pathlib import Path
 
 class VivoEmbeddingAPI:
-    def __init__(self, config_path="./config/settings.yaml"):
-        with open(config_path) as f:
-            config = yaml.safe_load(f)
-            api_config = config['api_config']
-            model_config = config['model_config']
+    def __init__(self):
+        # 获取vivo_rag_system包的根目录
+        package_root = Path(__file__).parent.parent.parent
+        config_path = package_root / "config" / "settings.yaml"
+        
+        with open(config_path, 'r', encoding='utf-8') as f:
+            self.config = yaml.safe_load(f)
+            
+        self.api_config = self.config.get('api_config', {})
+        self.base_url = f"https://{self.api_config['domain']}"
+        self.embedding_url = self.base_url + self.api_config['embedding_uri']
+        self.app_id = self.api_config['app_id']
+        self.app_key = self.api_config['app_key']
+
+        model_config = self.config['model_config']
 
         # 加载配置时添加默认值处理
-        self.app_id = api_config.get('app_id') or os.getenv("VIVO_APP_ID")
-        self.app_key = api_config.get('app_key') or os.getenv("VIVO_APP_KEY")
-        self.domain = api_config.get('domain', 'api-ai.vivo.com.cn')
-        self.uri = api_config.get('embedding_uri', '/embedding-model-api/predict/batch')
+        self.domain = self.api_config.get('domain', 'api-ai.vivo.com.cn')
+        self.uri = self.api_config.get('embedding_uri', '/embedding-model-api/predict/batch')
         self.model_name = model_config.get('embedding_model', 'm3e-base')
 
         # 参数验证

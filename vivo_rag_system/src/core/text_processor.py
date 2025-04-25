@@ -1,22 +1,29 @@
 import jieba.analyse
 from snownlp import SnowNLP
 import yaml
+import os
+from pathlib import Path
 
 class TextProcessor:
-    def __init__(self, config_path="./config/settings.yaml"):
-        with open(config_path) as f:
-            config = yaml.safe_load(f)
-            model_config = config['model_config']
+    def __init__(self):
+        # 获取vivo_rag_system包的根目录
+        package_root = Path(__file__).parent.parent.parent
+        config_path = package_root / "config" / "settings.yaml"
+        stopwords_path = package_root / "config" / "stopwords.txt"
         
-        self.keyword_topK = model_config['keyword_topK']
-        self.summary_sentences = model_config['summary_sentences']
+        with open(config_path, 'r', encoding='utf-8') as f:
+            self.config = yaml.safe_load(f)
+            
+        self.model_config = self.config.get('model_config', {})
+        self.keyword_topk = self.model_config.get('keyword_topK', 5)
+        self.summary_sentences = self.model_config.get('summary_sentences', 3)
         
         # 加载停用词
-        with open('./config/stopwords.txt',encoding='utf-8') as f:
+        with open(stopwords_path, encoding='utf-8') as f:
             self.stopwords = set(f.read().splitlines())
         
         # 初始化结巴分词
-        jieba.analyse.set_stop_words('./config/stopwords.txt')
+        jieba.analyse.set_stop_words(str(stopwords_path))
 
     def process(self, text):
         """完整文本处理流水线"""
@@ -35,7 +42,7 @@ class TextProcessor:
         """增强版关键词提取"""
         return jieba.analyse.textrank(
             text, 
-            topK=self.keyword_topK,
+            topK=self.keyword_topk,
             withWeight=False,
             allowPOS=('n', 'vn', 'v', 'ns', 'nr')
         )
