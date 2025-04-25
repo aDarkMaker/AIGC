@@ -1,5 +1,5 @@
 from .text_processor import TextProcessor
-from src.api.vivo_embedding import VivoEmbeddingAPI
+from ..api.vivo_embedding import VivoEmbeddingAPI
 from .data_manager import VectorDBManager
 
 class RAGEngine:
