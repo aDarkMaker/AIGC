@@ -1,0 +1,71 @@
+{
+  "rag_analysis": {
+    "keywords": [
+      "信息",
+      "个人信息",
+      "问询",
+      "政策",
+      "相关"
+    ],
+    "summary": [
+      "腾讯公司网页及问询提交隐私政策",
+      "本隐私政策(下称“隐私政策”)将解释对于您在腾讯公司网页(包括Tencent.com及其信息介绍的子页面",
+      "本隐私政策仅适用于腾讯公司网页(包括Tencent.com及其信息介绍的子页面"
+    ],
+    "related_context": ""
+  },
+  "legal_analysis": {
+    "metadata": {
+      "source_text_length": 3078,
+      "token_count": 1807,
+      "structure_info": {
+        "section_count": 37,
+        "completeness": 3.7,
+        "hierarchy": {
+          "main_clauses": 1,
+          "sub_clauses": 1
+        }
+      }
+    },
+    "keyword_analysis": {
+      "total_keywords": 95,
+      "keyword_distribution": {
+        "隐私": 22,
+        "使用": 18,
+        "个人信息": 29,
+        "收集": 7,
+        "数据": 8,
+        "存储": 2,
+        "共享": 2,
+        "条款": 4,
+        "协议": 1,
+        "信息安全": 1,
+        "数据保护": 1
+      },
+      "average_confidence": 0.9386842105263156
+    },
+    "legal_analysis": {
+      "compliance": {
+        "compliance_score": 1.0,
+        "missing_sections": [],
+        "applicable_laws": [
+          "《个人信息保护法》",
+          "《网络安全法》",
+          "《数据安全法》"
+        ],
+        "risk_level": "high"
+      },
+      "privacy_score": 1.0,
+      "risk_assessment": {
+        "threshold": 2.0,
+        "is_high_risk": true
+      }
+    },
+    "recommendations": {
+      "general_assessment": "文档合规性存在明显问题，建议进行全面修订",
+      "specific_recommendations": [],
+      "legal_references": [],
+      "risk_mitigation": []
+    }
+  }
+}

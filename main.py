@@ -96,7 +96,7 @@ class IntegratedAnalysisSystem:
 
 def main():
     parser = argparse.ArgumentParser(description="集成文本分析系统")
-    parser.add_argument("--file", "-f", help="要分析的文件路径")
+    parser.add_argument("--file", "-f", help="要分析的文件路径（可选，默认使用项目根目录下的Target.txt）")
     parser.add_argument("--domain", "-d", default="privacy",
                       choices=["privacy", "intellectual_property", "contract"],
                       help="分析领域 (默认: privacy)")
@@ -108,17 +108,26 @@ def main():
     
     if args.interactive:
         system.interactive_mode()
-    elif args.file:
+    else:
         try:
-            with open(args.file, "r", encoding="utf-8") as f:
+            # 如果没有指定文件，则使用 Target.txt
+            input_file = args.file if args.file else os.path.join(project_root, "Target.txt")
+            
+            if not os.path.exists(input_file):
+                print(f"错误: 找不到文件 {input_file}")
+                sys.exit(1)
+                
+            with open(input_file, "r", encoding="utf-8") as f:
                 text = f.read()
+                
+            print(f"正在分析文件: {input_file}")
             results = system.analyze_document(text, args.domain)
             system.save_results(results, "analysis_output")
+            print("分析完成！")
+            
         except Exception as e:
             print(f"错误: {str(e)}")
             sys.exit(1)
-    else:
-        parser.print_help()
 
 if __name__ == "__main__":
     main()

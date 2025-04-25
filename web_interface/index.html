@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>法律文本分析系统</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>法律文本智能分析系统</h1>
+            <p class="subtitle">基于RAG的专业法律文档分析工具</p>
+        </header>
+
+        <main>
+            <div class="analysis-form">
+                <div class="input-section">
+                    <h2>文本输入</h2>
+                    <div class="input-group">
+                        <select id="analysisType">
+                            <option value="privacy">隐私条款分析</option>
+                            <option value="intellectual_property">知识产权分析</option>
+                            <option value="contract">合同条款分析</option>
+                        </select>
+                        <div class="file-upload">
+                            <label for="fileInput" class="file-label">
+                                <span>选择文件</span>
+                                <input type="file" id="fileInput" accept=".txt,.doc,.docx">
+                            </label>
+                            <span id="fileName">未选择文件</span>
+                        </div>
+                    </div>
+                    <textarea id="textInput" placeholder="在此输入要分析的文本..."></textarea>
+                    <button id="analyzeBtn">开始分析</button>
+                </div>
+
+                <div class="results-section">
+                    <h2>分析结果</h2>
+                    <div class="results-container">
+                        <div class="result-card keywords">
+                            <h3>关键词分析</h3>
+                            <div id="keywordsResult" class="result-content"></div>
+                        </div>
+                        <div class="result-card summary">
+                            <h3>文本摘要</h3>
+                            <div id="summaryResult" class="result-content"></div>
+                        </div>
+                        <div class="result-card legal">
+                            <h3>法律分析</h3>
+                            <div id="legalResult" class="result-content"></div>
+                        </div>
+                        <div class="result-card risk">
+                            <h3>风险评估</h3>
+                            <div id="riskResult" class="result-content">
+                                <div class="risk-meter">
+                                    <div class="risk-level" style="width: 0%"></div>
+                                </div>
+                                <div id="riskScore">风险评分：-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2025 法律文本智能分析系统</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
