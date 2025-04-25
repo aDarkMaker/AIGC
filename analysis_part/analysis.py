@@ -129,9 +129,11 @@ class EnhancedAnalyzer:
             
         return min(base_score, 1.0)  # 确保分数不超过1
 
-def process_pipeline(input_path: str, domain: str = 'privacy') -> dict:
+def process_pipeline(domain: str = 'privacy') -> dict:
     """增强版处理流程"""
-    os.makedirs('data', exist_ok=True)
+    # 使用项目根目录下的固定文件
+    input_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'Target.txt')
+    output_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'Analysis.txt')
     
     with open(input_path, 'r', encoding='utf-8') as f:
         text = f.read()
@@ -139,35 +141,12 @@ def process_pipeline(input_path: str, domain: str = 'privacy') -> dict:
     analyzer = EnhancedAnalyzer()
     results = analyzer.analyze_document(text, domain)
     
-    # 保存结果
-    output_base = os.path.splitext(os.path.basename(input_path))[0]
-    json_path = f'data/{output_base}_analysis.json'
-    csv_path = f'data/{output_base}_analysis.csv'
-    
-    save_results(results, json_path, csv_path)
-    return results
-
-def save_results(results: dict, json_path: str, csv_path: str):
-    """保存分析结果"""
-    # 保存详细JSON报告
-    with open(json_path, 'w', encoding='utf-8') as f:
+    # 保存详细分析结果到 Analysis.txt
+    with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
     
-    # 保存CSV摘要
-    df = pd.DataFrame({
-        '指标': ['文本长度', '关键词数量', '平均置信度', '隐私分数', '合规得分', '风险等级'],
-        '数值': [
-            results['metadata']['source_text_length'],
-            results['keyword_analysis']['total_keywords'],
-            round(results['keyword_analysis']['average_confidence'], 3),
-            results['legal_analysis']['privacy_score'],
-            results['legal_analysis']['compliance']['compliance_score'],
-            results['legal_analysis']['compliance']['risk_level']
-        ]
-    })
-    df.to_csv(csv_path, index=False, encoding='utf-8-sig')
+    return results
 
 if __name__ == "__main__":
-    input_file = "sample_privacy.txt"
-    results = process_pipeline(input_file)
-    print("Analysis completed and results saved.")
+    results = process_pipeline()
+    print("Analysis completed and results saved to Analysis.txt")

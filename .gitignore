@@ -1,0 +1,21 @@
+# 分析结果文件
+Analysis.txt
+Target.txt
+
+# Python缓存文件
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# IDE配置
+.vscode/
+.idea/
+
+# 虚拟环境
+venv/
+env/
+.env/
