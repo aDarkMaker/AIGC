@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用说明 - 法律文本智能分析系统</title>
+    <link rel="icon" type="image/png" href="法律援助.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        body {
+            min-height: 100vh;
+            overflow-y: auto;
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+            overflow-y: auto;
+        }
+        
+        .instruction-container {
+            width: 100%;
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            letter-spacing: 0.5px;
+            line-height: 1.8;
+            margin: 1rem 0;
+            padding: 2rem;
+        }
+        
+        .instruction-section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .instruction-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.2rem;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 0.8rem;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+        }
+        
+        .instruction-section p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+            color: var(--text-color);
+            opacity: 0.9;
+        }
+        
+        .instruction-section ul {
+            list-style-type: none;
+            padding-left: 1.5rem;
+        }
+        
+        .instruction-section li {
+            margin: 1rem 0;
+            position: relative;
+            padding-left: 0.5rem;
+            transition: transform 0.2s ease;
+        }
+        
+        .instruction-section li:before {
+            content: "•";
+            color: var(--secondary-color);
+            position: absolute;
+            left: -1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .instruction-section li:hover {
+            transform: translateX(5px);
+        }
+
+        .back-to-home {
+            display: inline-flex;
+            align-items: center;
+            margin: 1rem;
+            padding: 0.8rem 1.2rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            transition: all 0.3s ease;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .back-to-home:hover {
+            background-color: rgba(52, 152, 219, 0.1);
+            transform: translateX(-5px);
+        }
+
+        .back-to-home::before {
+            content: "←";
+            margin-right: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .back-to-home:hover::before {
+            transform: translateX(-3px);
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 1rem 0;
+            background: var(--card-background);
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        footer a:hover {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>使用说明</h1>
+            <p class="subtitle">法律文本智能分析系统</p>
+        </header>
+
+        <main>
+            <a href="index.html" class="back-to-home">返回首页</a>
+            
+            <div class="instruction-container">
+                <div class="instruction-section">
+                    <h2>系统概述</h2>
+                    <p>法律文本智能分析系统是一个专门设计用于分析各类法律文本的智能工具。本系统能够帮助用户快速理解和分析隐私条款、知识产权和合同条款等法律文档。</p>
+                </div>
+
+                <div class="instruction-section">
+                    <h2>基本功能</h2>
+                    <ul>
+                        <li>隐私条款分析：评估隐私政策的合规性和风险点</li>
+                        <li>知识产权分析：识别和评估知识产权相关条款</li>
+                        <li>合同条款分析：解析合同条款的关键信息和潜在风险</li>
+                    </ul>
+                </div>
+
+                <div class="instruction-section">
+                    <h2>使用步骤</h2>
+                    <ul>
+                        <li>选择分析类型：从下拉菜单中选择需要进行的分析类型</li>
+                        <li>上传文件：点击"选择文件"按钮上传待分析的文本文件（支持常见格式）</li>
+                        <li>开始分析：点击"开始分析"按钮，系统将自动进行分析</li>
+                        <li>查看结果：分析完成后，系统将显示关键词、摘要和专业建议等分析结果</li>
+                    </ul>
+                </div>
+
+                <div class="instruction-section">
+                    <h2>结果说明</h2>
+                    <ul>
+                        <li>关键词：突出显示文本中的重要法律术语和关键概念</li>
+                        <li>摘要分析：提供文本的主要内容概述</li>
+                        <li>法律分析：包含适用法律、合规评估和具体建议</li>
+                        <li>风险评估：通过可视化方式展示整体风险水平</li>
+                    </ul>
+                </div>
+
+                <div class="instruction-section">
+                    <h2>注意事项</h2>
+                    <ul>
+                        <li>请确保上传的文件不含有敏感个人信息</li>
+                        <li>系统分析结果仅供参考，重要决策请咨询专业法律人士</li>
+                        <li>建议使用最新版本的主流浏览器以获得最佳体验</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2025 法律文本智能分析系统 | <a href="instructions.html">使用说明</a> | <a href="privacy.html">隐私政策</a></p>
+        </footer>
+    </div>
+</body>
+</html>

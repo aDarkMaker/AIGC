@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐私政策 - 法律文本智能分析系统</title>
+    <link rel="icon" type="image/png" href="法律援助.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        body {
+            min-height: 100vh;
+            overflow-y: auto;
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+            overflow-y: auto;
+        }
+        
+        .privacy-container {
+            width: 100%;
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            letter-spacing: 0.5px;
+            line-height: 1.8;
+            margin: 1rem 0;
+            padding: 2rem;
+        }
+        
+        .privacy-section {
+            margin-bottom: 2.5rem;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .privacy-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.2rem;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 0.8rem;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+        }
+        
+        .privacy-section p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+            color: var(--text-color);
+            opacity: 0.9;
+            letter-spacing: 0.5px;
+            text-justify: inter-word;
+        }
+        
+        .privacy-section ul {
+            list-style-type: none;
+            padding-left: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+        
+        .privacy-section li {
+            margin: 1rem 0;
+            position: relative;
+            padding-left: 0.5rem;
+            transition: transform 0.2s ease;
+            letter-spacing: 0.5px;
+        }
+        
+        .privacy-section li:before {
+            content: "•";
+            color: var(--secondary-color);
+            position: absolute;
+            left: -1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .privacy-section li:hover {
+            transform: translateX(5px);
+        }
+
+        .back-to-home {
+            display: inline-flex;
+            align-items: center;
+            margin: 1rem;
+            padding: 0.8rem 1.2rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            transition: all 0.3s ease;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .back-to-home:hover {
+            background-color: rgba(52, 152, 219, 0.1);
+            transform: translateX(-5px);
+        }
+
+        .back-to-home::before {
+            content: "←";
+            margin-right: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .back-to-home:hover::before {
+            transform: translateX(-3px);
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 1rem 0;
+            background: var(--card-background);
+            position: sticky;
+            bottom: 0;
+            z-index: 10;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        footer a:hover {
+            color: var(--primary-color);
+        }
+
+        .contact-info {
+            background: rgba(52, 152, 219, 0.05);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info li:before {
+            margin-top: -2px;
+        }
+
+        /* 自定义滚动条样式 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>隐私政策</h1>
+            <p class="subtitle">法律文本智能分析系统</p>
+        </header>
+
+        <main>
+            <a href="index.html" class="back-to-home">返回首页</a>
+            
+            <div class="privacy-container">
+                <div class="privacy-section">
+                    <h2>引言</h2>
+                    <p>本隐私政策旨在向您说明我们如何收集、使用和保护您在使用法律文本智能分析系统（以下简称"本系统"）时提供的个人信息。我们深知个人信息对您的重要性，并会尽全力保护您的个人信息安全。</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>信息收集</h2>
+                    <p>在您使用本系统时，我们可能会收集以下信息：</p>
+                    <ul>
+                        <li>您上传的文本文件内容</li>
+                        <li>系统使用记录和分析结果</li>
+                        <li>浏览器类型、访问时间等基本设备信息</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>信息使用</h2>
+                    <p>我们收集的信息将用于：</p>
+                    <ul>
+                        <li>提供法律文本分析服务</li>
+                        <li>改进和优化系统功能</li>
+                        <li>生成分析报告和建议</li>
+                        <li>系统性能监控和问题排查</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>信息保护</h2>
+                    <p>为保护您的信息安全，我们采取以下措施：</p>
+                    <ul>
+                        <li>所有数据传输采用加密协议</li>
+                        <li>定期进行安全评估和系统更新</li>
+                        <li>严格控制数据访问权限</li>
+                        <li>定期删除不必要的数据</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>信息共享</h2>
+                    <p>我们承诺：</p>
+                    <ul>
+                        <li>不会向第三方出售您的个人信息</li>
+                        <li>不会将您的信息用于本政策未声明的其他用途</li>
+                        <li>仅在法律要求的情况下才会披露相关信息</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>用户权利</h2>
+                    <p>作为用户，您拥有以下权利：</p>
+                    <ul>
+                        <li>访问和导出您的数据</li>
+                        <li>更正或删除您的个人信息</li>
+                        <li>拒绝数据处理</li>
+                        <li>随时撤回同意</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>政策更新</h2>
+                    <p>我们可能会不时更新本隐私政策。当我们进行重大更改时，将通过系统公告通知您。继续使用本系统即表示您同意新的隐私政策。</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>联系我们</h2>
+                    <p>如果您对本隐私政策有任何疑问或建议，请通过以下方式联系我们：</p>
+                    <ul class="contact-info">
+                        <li>邮箱：2261265112@qq.com</li>
+                        <li>电话：15623169098</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2025 法律文本智能分析系统 | <a href="instructions.html">使用说明</a> | <a href="privacy.html">隐私政策</a></p>
+        </footer>
+    </div>
+</body>
+</html>

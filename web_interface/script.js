@@ -1,150 +1,251 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const fileInput = document.getElementById('fileInput');
-    const fileName = document.getElementById('fileName');
-    const textInput = document.getElementById('textInput');
-    const analyzeBtn = document.getElementById('analyzeBtn');
-    const analysisType = document.getElementById('analysisType');
-
-    // 文件选择处理
-    fileInput.addEventListener('change', (e) => {
-        const file = e.target.files[0];
-        if (file) {
-            fileName.textContent = file.name;
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                textInput.value = e.target.result;
-            };
-            reader.readAsText(file);
-        } else {
-            fileName.textContent = '未选择文件';
+    // 初始化UI元素
+    const elements = {
+        fileInput: document.getElementById('fileInput'),
+        fileName: document.getElementById('fileName'),
+        textInput: document.getElementById('textInput'),
+        analyzeBtn: document.getElementById('analyzeBtn'),
+        analysisType: document.getElementById('analysisType'),
+        messageContainer: document.getElementById('messageContainer'),
+        results: {
+            keywords: document.getElementById('keywordsResult'),
+            summary: document.getElementById('summaryResult'),
+            legal: document.getElementById('legalResult'),
+            riskLevel: document.querySelector('.risk-level'),
+            riskScore: document.getElementById('riskScore')
         }
-    });
+    };
+
+    // 文件处理
+    elements.fileInput.addEventListener('change', handleFileSelection);
 
     // 分析按钮处理
-    analyzeBtn.addEventListener('click', async () => {
-        if (!textInput.value.trim()) {
-            showError('请输入要分析的文本！');
+    elements.analyzeBtn.addEventListener('click', handleAnalysis);
+
+    // 处理文件选择
+    async function handleFileSelection(e) {
+        const file = e.target.files[0];
+        if (!file) {
+            elements.fileName.textContent = '未选择文件';
+            return;
+        }
+
+        // 验证文件类型
+        const validTypes = ['.txt', '.doc', '.docx'];
+        const fileExtension = file.name.toLowerCase().substring(file.name.lastIndexOf('.'));
+        if (!validTypes.includes(fileExtension)) {
+            showMessage('请选择有效的文本文件 (.txt, .doc, .docx)', 'error');
+            elements.fileInput.value = '';
+            elements.fileName.textContent = '未选择文件';
+            return;
+        }
+
+        elements.fileName.textContent = file.name;
+
+        try {
+            const text = await readFile(file);
+            elements.textInput.value = text;
+        } catch (error) {
+            showMessage('读取文件时出错：' + error.message, 'error');
+        }
+    }
+
+    // 读取文件内容
+    function readFile(file) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = (e) => resolve(e.target.result);
+            reader.onerror = (e) => reject(new Error('文件读取失败'));
+            reader.readAsText(file);
+        });
+    }
+
+    // 处理分析请求
+    async function handleAnalysis() {
+        const text = elements.textInput.value.trim();
+        if (!text) {
+            showMessage('请输入要分析的文本！', 'error');
             return;
         }
 
         showLoading(true);
+        resetResults();
 
-        try {
-            const response = await fetch('/analyze', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    text: textInput.value,
-                    domain: analysisType.value
-                })
-            });
+        let retryCount = 0;
+        const maxRetries = 3;
+        const retryDelay = 1000; // 1秒
 
-            if (!response.ok) {
-                throw new Error(response.statusText || '服务器响应错误');
+        while (retryCount < maxRetries) {
+            try {
+                const response = await fetch('http://127.0.0.1:5000/analyze', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        text: text,
+                        domain: elements.analysisType.value
+                    })
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.detail || '服务器响应错误');
+                }
+
+                const result = await response.json();
+                updateResults(result);
+                break;
+
+            } catch (error) {
+                console.error('分析出错:', error);
+                retryCount++;
+                
+                if (error.name === 'TypeError' && error.message.includes('Failed to fetch')) {
+                    if (retryCount < maxRetries) {
+                        showMessage(`服务器连接失败，正在尝试第${retryCount}次重连...`, 'info');
+                        await new Promise(resolve => setTimeout(resolve, retryDelay));
+                        continue;
+                    }
+                    showMessage('无法连接到服务器，请确保服务器已启动并运行在正确的端口(5000)上', 'error');
+                } else {
+                    showMessage(`分析过程出现错误：${error.message}`, 'error');
+                }
+                resetResults();
+            } finally {
+                showLoading(false);
             }
-
-            const result = await response.json();
-            updateResults(result);
-            showSuccess('分析完成！');
-        } catch (error) {
-            console.error('分析出错:', error);
-            showError('分析过程出现错误，请稍后重试。错误详情：' + error.message);
-        } finally {
-            showLoading(false);
         }
-    });
+    }
 
     // 更新分析结果显示
     function updateResults(result) {
-        // 更新关键词
-        const keywordsResult = document.getElementById('keywordsResult');
-        keywordsResult.innerHTML = result.rag_analysis.keywords
-            .map(keyword => `<span class="keyword-tag">${keyword}</span>`)
-            .join('');
+        try {
+            // 更新关键词
+            if (result.rag_analysis?.keywords) {
+                elements.results.keywords.innerHTML = result.rag_analysis.keywords
+                    .map(keyword => `<span class="keyword-tag">${escapeHtml(keyword)}</span>`)
+                    .join('');
+            }
 
-        // 更新摘要
-        const summaryResult = document.getElementById('summaryResult');
-        summaryResult.innerHTML = result.rag_analysis.summary
-            .map(line => `<p>${line}</p>`)
-            .join('');
+            // 更新摘要
+            if (result.rag_analysis?.summary) {
+                elements.results.summary.innerHTML = result.rag_analysis.summary
+                    .map(line => `<p>${escapeHtml(line)}</p>`)
+                    .join('');
+            }
 
-        // 更新法律分析
-        const legalResult = document.getElementById('legalResult');
-        const legalAnalysis = result.legal_analysis;
-        legalResult.innerHTML = `
-            <div class="legal-item">
-                <strong>适用法律：</strong>
-                <ul>${legalAnalysis.compliance.applicable_laws.map(law => `<li>${law}</li>`).join('')}</ul>
-            </div>
-            <div class="legal-item">
-                <strong>合规性评估：</strong>
-                <p>评分：${(legalAnalysis.compliance.compliance_score * 100).toFixed(1)}%</p>
-            </div>
-            <div class="legal-item">
-                <strong>总体评价：</strong>
-                <p>${legalAnalysis.recommendations.general_assessment}</p>
-            </div>
-        `;
+            // 更新法律分析
+            if (result.legal_analysis) {
+                const compliance = result.legal_analysis.compliance || {};
+                const recommendations = result.legal_analysis.recommendations || {};
+                
+                let legalContent = '<div class="legal-details">';
+                
+                // 适用法律
+                if (compliance.applicable_laws) {
+                    legalContent += `
+                        <div class="legal-item">
+                            <strong>适用法律：</strong>
+                            <ul>${compliance.applicable_laws.map(law => 
+                                `<li>${escapeHtml(law)}</li>`).join('')}
+                            </ul>
+                        </div>`;
+                }
+                
+                // 合规评估
+                if (compliance.compliance_score !== undefined) {
+                    legalContent += `
+                        <div class="legal-item">
+                            <strong>合规评估：</strong>
+                            <p>合规得分：${(compliance.compliance_score * 100).toFixed(1)}%</p>
+                            <p>风险等级：${compliance.risk_level || '未知'}</p>
+                        </div>`;
+                }
+                
+                // 总体评价和建议
+                if (recommendations.general_assessment || recommendations.specific_recommendations) {
+                    legalContent += `
+                        <div class="legal-item">
+                            <strong>专业建议：</strong>
+                            ${recommendations.general_assessment ? 
+                              `<p class="assessment">${escapeHtml(recommendations.general_assessment)}</p>` : ''}
+                            ${recommendations.specific_recommendations ? `
+                                <ul class="recommendations">
+                                    ${recommendations.specific_recommendations.map(rec => 
+                                        `<li>${escapeHtml(rec)}</li>`).join('')}
+                                </ul>` : ''}
+                        </div>`;
+                }
+                
+                legalContent += '</div>';
+                elements.results.legal.innerHTML = legalContent;
 
-        // 更新风险评估
-        const riskLevel = document.querySelector('.risk-level');
-        const riskScore = document.getElementById('riskScore');
-        const riskPercentage = legalAnalysis.compliance.compliance_score * 100;
-        riskLevel.style.width = `${riskPercentage}%`;
-        riskLevel.style.backgroundColor = getRiskColor(riskPercentage);
-        riskScore.textContent = `风险评分：${riskPercentage.toFixed(1)}%`;
+                // 更新风险评估
+                let riskScore = compliance.compliance_score || 0;
+                riskScore = (1 - riskScore) * 100; // 将合规分数转换为风险分数
+                elements.results.riskLevel.style.width = `${riskScore}%`;
+                elements.results.riskLevel.style.backgroundColor = getRiskColor(100 - riskScore);
+                elements.results.riskScore.textContent = `风险评分：${riskScore.toFixed(1)}%`;
+
+                // 添加风险等级过渡动画
+                elements.results.riskLevel.style.transition = 'width 1s ease-in-out, background-color 1s ease-in-out';
+            }
+        } catch (error) {
+            console.error('更新结果时出错:', error);
+            showMessage('显示分析结果时出错，请重试', 'error');
+        }
     }
 
-    // 根据风险程度返回对应的颜色
+    // 重置结果显示
+    function resetResults() {
+        elements.results.keywords.innerHTML = '';
+        elements.results.summary.innerHTML = '';
+        elements.results.legal.innerHTML = '';
+        elements.results.riskLevel.style.width = '0%';
+        elements.results.riskScore.textContent = '风险评分：-';
+    }
+
+    // 显示消息提示
+    function showMessage(message, type = 'info') {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `${type}-message`;
+        messageDiv.textContent = message;
+        
+        elements.messageContainer.innerHTML = '';
+        elements.messageContainer.appendChild(messageDiv);
+        
+        // 如果不是错误消息，3秒后自动消失
+        if (type !== 'error') {
+            setTimeout(() => messageDiv.remove(), 3000);
+        }
+    }
+
+    // 显示/隐藏加载状态
+    function showLoading(isLoading) {
+        elements.analyzeBtn.disabled = isLoading;
+        elements.analyzeBtn.innerHTML = isLoading ? 
+            '<span class="loading-spinner"></span>分析中...' : 
+            '开始分析';
+    }
+
+    // 获取风险等级对应的颜色
     function getRiskColor(score) {
         if (score >= 80) return '#27ae60';  // 绿色 - 低风险
         if (score >= 60) return '#f1c40f';  // 黄色 - 中等风险
         return '#e74c3c';  // 红色 - 高风险
     }
+
+    // HTML转义函数
+    function escapeHtml(unsafe) {
+        return unsafe
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
 });
-
-// 添加错误提示和加载状态管理
-function showError(message) {
-    const errorDiv = document.createElement('div');
-    errorDiv.className = 'error-message';
-    errorDiv.textContent = message;
-    
-    const container = document.querySelector('.input-section');
-    // 移除已有的错误提示
-    const existingError = container.querySelector('.error-message');
-    if (existingError) {
-        existingError.remove();
-    }
-    
-    container.insertBefore(errorDiv, container.querySelector('button'));
-    
-    // 3秒后自动消失
-    setTimeout(() => errorDiv.remove(), 3000);
-}
-
-function showSuccess(message) {
-    const successDiv = document.createElement('div');
-    successDiv.className = 'success-message';
-    successDiv.textContent = message;
-    
-    const container = document.querySelector('.input-section');
-    container.insertBefore(successDiv, container.querySelector('button'));
-    
-    setTimeout(() => successDiv.remove(), 3000);
-}
-
-function showLoading(isLoading) {
-    const analyzeBtn = document.getElementById('analyzeBtn');
-    if (isLoading) {
-        analyzeBtn.disabled = true;
-        analyzeBtn.innerHTML = '<span class="loading-spinner"></span> 分析中...';
-    } else {
-        analyzeBtn.disabled = false;
-        analyzeBtn.textContent = '开始分析';
-    }
-}
 
 // 添加关键词标签样式
 const style = document.createElement('style');
@@ -219,3 +320,8 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+document.getElementById('fileInput').addEventListener('change', function(e) {
+    const fileName = e.target.files[0] ? e.target.files[0].name : '未选择文件';
+    document.getElementById('fileName').textContent = fileName;
+});
