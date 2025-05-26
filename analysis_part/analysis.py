@@ -57,12 +57,17 @@ class EnhancedAnalyzer:
                 }
             }
         }
-        
-        # 生成专业建议
-        results['recommendations'] = self.legal_analyzer.generate_professional_advice({
-            **results['legal_analysis'],
-            **{'keyword_analysis': results['keyword_analysis']}
-        })
+          # 生成专业建议
+        # 从 legal_compliance 中提取正确的字段名
+        professional_advice_input = {
+            'compliance_score': legal_compliance.get('compliance_score'),
+            'missing_sections': legal_compliance.get('missing_sections'),
+            'found_sections_details': legal_compliance.get('found_sections_details'), 
+            'applicable_laws': legal_compliance.get('applicable_laws'),
+            'risk_level': legal_compliance.get('risk_level')
+        }
+        advice_details = self.legal_analyzer.generate_professional_advice(professional_advice_input, domain)
+        results['recommendations'] = advice_details
         
         return results
 

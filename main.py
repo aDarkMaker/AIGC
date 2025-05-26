@@ -19,10 +19,10 @@ class IntegratedAnalysisSystem:
         self.rag_engine = RAGEngine()
         self.legal_analyzer = EnhancedAnalyzer()
         
-    def analyze_document(self, text: str, domain: str = 'privacy') -> Dict[str, Any]:
+    def analyze_document(self, text: str, domain: str = 'privacy', use_professional_kb: bool = False) -> Dict[str, Any]:
         """完整文档分析"""
         # RAG 系统分析
-        rag_results = self.rag_engine.process_query(text)
+        rag_results = self.rag_engine.process_query(text, use_professional_kb=use_professional_kb) # 传递参数
         
         # 法律分析
         legal_results = self.legal_analyzer.analyze_document(text, domain)

@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         textInput: document.getElementById('textInput'),
         analyzeBtn: document.getElementById('analyzeBtn'),
         analysisType: document.getElementById('analysisType'),
+        professionalKnowledgeBase: document.getElementById('professionalKnowledgeBase'), // 新增
         messageContainer: document.getElementById('messageContainer'),
         results: {
             keywords: document.getElementById('keywordsResult'),
@@ -84,7 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     },
                     body: JSON.stringify({
                         text: text,
-                        domain: elements.analysisType.value
+                        domain: elements.analysisType.value,
+                        use_professional_kb: elements.professionalKnowledgeBase.checked // 新增
                     })
                 });
 
@@ -182,11 +184,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 elements.results.legal.innerHTML = legalContent;
 
                 // 更新风险评估
-                let riskScore = compliance.compliance_score || 0;
-                riskScore = (1 - riskScore) * 100; // 将合规分数转换为风险分数
-                elements.results.riskLevel.style.width = `${riskScore}%`;
-                elements.results.riskLevel.style.backgroundColor = getRiskColor(100 - riskScore);
-                elements.results.riskScore.textContent = `风险评分：${riskScore.toFixed(1)}%`;
+                let riskScoreValue = result.legal_analysis?.compliance?.compliance_score;
+                // 将合规分数转换为风险分数 (0-100 范围)
+                // 如果 compliance_score 未定义或为 null，则默认为 0，对应风险评分为 100
+                let calculatedRiskScore = 100 - (riskScoreValue === undefined || riskScoreValue === null ? 0 : riskScoreValue);
+                
+                elements.results.riskLevel.style.width = `${calculatedRiskScore}%`;
+                // getRiskColor 的参数应该是合规分数 (越高越好)，或者调整 getRiskColor 使其接受风险分数
+                // 当前 getRiskColor 接受的是合规分 (100 - calculatedRiskScore)
+                elements.results.riskLevel.style.backgroundColor = getRiskColor(100 - calculatedRiskScore); 
+                elements.results.riskScore.textContent = `风险评分：${calculatedRiskScore.toFixed(1)}%`;
 
                 // 添加风险等级过渡动画
                 elements.results.riskLevel.style.transition = 'width 1s ease-in-out, background-color 1s ease-in-out';

@@ -3,9 +3,11 @@ api_config:
   app_key: "qleYQdctZHIbopVc"
   domain: "api-ai.vivo.com.cn"
   embedding_uri: "/embedding-model-api/predict/batch"
+  llm_uri: "/llm-api/v1/chat/completions"
 
 model_config:
   embedding_model: "m3e-base"
+  llm_model: "vivo-llm-chat"
   keyword_topK: 5
   summary_sentences: 3
 

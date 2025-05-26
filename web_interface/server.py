@@ -63,6 +63,8 @@ def analyze():
 
         # 获取分析领域，默认为privacy
         domain = data.get('domain', 'privacy')
+        use_professional_kb = data.get('use_professional_kb', False) # 新增
+
         if domain not in ['privacy', 'intellectual_property', 'contract']:
             return jsonify({
                 'error': '无效的分析领域',
@@ -71,7 +73,8 @@ def analyze():
         
         # 执行分析
         try:
-            results = analysis_system.analyze_document(text, domain)
+            # 根据是否启用专业知识库，调用不同的分析方法或传递参数
+            results = analysis_system.analyze_document(text, domain, use_professional_kb=use_professional_kb)
             
             # 验证结果格式
             if not isinstance(results, dict):
