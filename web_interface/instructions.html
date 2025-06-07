@@ -14,15 +14,6 @@
             background-color: var(--background-color);
         }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1rem;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
         main {
             flex: 1;
             overflow-y: auto;
@@ -31,12 +22,10 @@
         .instruction-container {
             width: 100%;
             background: var(--card-background);
-            border-radius: var(--border-radius);
             box-shadow: var(--shadow);
             letter-spacing: 0.5px;
             line-height: 1.8;
-            margin: 1rem 0;
-            padding: 2rem;
+            padding: 1rem 2rem 2rem;
         }
         
         .instruction-section {
@@ -79,15 +68,14 @@
             font-size: 1.2rem;
         }
 
-        .instruction-section li:hover {
+        /* .instruction-section li:hover {
             transform: translateX(5px);
-        }
+        } */
 
         .back-to-home {
             display: inline-flex;
             align-items: center;
-            margin: 1rem;
-            padding: 0.8rem 1.2rem;
+            padding: 0 0 1rem 0;
             color: var(--secondary-color);
             text-decoration: none;
             border-radius: var(--border-radius);
@@ -97,13 +85,12 @@
         }
 
         .back-to-home:hover {
-            background-color: rgba(52, 152, 219, 0.1);
             transform: translateX(-5px);
         }
 
         .back-to-home::before {
             content: "←";
-            margin-right: 8px;
+            margin-right: 4px;
             transition: transform 0.3s ease;
         }
 
@@ -137,10 +124,9 @@
             <p class="subtitle">法律文本智能分析系统</p>
         </header>
 
-        <main>
-            <a href="index.html" class="back-to-home">返回首页</a>
-            
+        <main>            
             <div class="instruction-container">
+                <a href="index.html" class="back-to-home">返回首页</a>
                 <div class="instruction-section">
                     <h2>系统概述</h2>
                     <p>法律文本智能分析系统是一个专门设计用于分析各类法律文本的智能工具。本系统能够帮助用户快速理解和分析隐私条款、知识产权和合同条款等法律文档。</p>

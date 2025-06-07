@@ -14,15 +14,6 @@
             background-color: var(--background-color);
         }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1rem;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
         main {
             flex: 1;
             overflow-y: auto;
@@ -31,12 +22,10 @@
         .privacy-container {
             width: 100%;
             background: var(--card-background);
-            border-radius: var(--border-radius);
             box-shadow: var(--shadow);
             letter-spacing: 0.5px;
             line-height: 1.8;
-            margin: 1rem 0;
-            padding: 2rem;
+            padding: 1rem 2rem 2rem;
         }
         
         .privacy-section {
@@ -89,15 +78,14 @@
             font-size: 1.2rem;
         }
 
-        .privacy-section li:hover {
+        /* .privacy-section li:hover {
             transform: translateX(5px);
-        }
+        } */
 
         .back-to-home {
             display: inline-flex;
             align-items: center;
-            margin: 1rem;
-            padding: 0.8rem 1.2rem;
+            padding: 0 0 1rem 0;
             color: var(--secondary-color);
             text-decoration: none;
             border-radius: var(--border-radius);
@@ -107,13 +95,12 @@
         }
 
         .back-to-home:hover {
-            background-color: rgba(52, 152, 219, 0.1);
             transform: translateX(-5px);
         }
 
         .back-to-home::before {
             content: "←";
-            margin-right: 8px;
+            margin-right: 4px;
             transition: transform 0.3s ease;
         }
 
@@ -145,13 +132,14 @@
         .contact-info {
             background: rgba(52, 152, 219, 0.05);
             border-radius: var(--border-radius);
-            padding: 1.5rem;
+            padding: 0.8rem 1.5rem;
             margin-top: 1rem;
         }
 
         .contact-info li {
             display: flex;
             align-items: center;
+            margin-left: 1.5rem;
         }
 
         .contact-info li:before {
@@ -186,9 +174,8 @@
         </header>
 
         <main>
-            <a href="index.html" class="back-to-home">返回首页</a>
-            
             <div class="privacy-container">
+                <a href="index.html" class="back-to-home">返回首页</a>
                 <div class="privacy-section">
                     <h2>引言</h2>
                     <p>本隐私政策旨在向您说明我们如何收集、使用和保护您在使用法律文本智能分析系统（以下简称"本系统"）时提供的个人信息。我们深知个人信息对您的重要性，并会尽全力保护您的个人信息安全。</p>
