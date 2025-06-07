@@ -218,14 +218,6 @@ class LegalAnalyzer:
             return "中风险"
         else:
             return "低风险"
-        
-        # 旧的逻辑，可以移除或注释
-        # base_risk = self.config[\'LEGAL_TERMS\'].get(domain, {}).get(\'risk_level\', \'low\')
-        # if len(missing_sections) > 2 or compliance_score < 0.4:
-        #     return \'high\'
-        # elif len(missing_sections) > 0 or compliance_score < 0.7:
-        #     return \'medium\'
-        # return base_risk
     
     def _is_main_clause(self, section: str) -> bool:
         """判断是否为主条款 - 此方法可能需要根据新的章节结构调整或废弃"""
