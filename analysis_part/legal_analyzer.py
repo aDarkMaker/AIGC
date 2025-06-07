@@ -11,15 +11,73 @@ class LegalAnalyzer:
         with open(config_path, 'r', encoding='utf-8') as f:
             self.config = json.load(f)
         
+        # 加载法律术语词典
+        legal_terms_path = Path(__file__).parent / 'legal_terms.txt'
+        self.legal_terms = self._load_legal_terms(legal_terms_path)
+        
+        self.error_count = defaultdict(int)
+        
+    def _load_legal_terms(self, path: Path) -> set:
+        """加载法律术语词典"""
+        terms = set()
+        try:
+            with open(path, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith('//'):
+                        # 移除词性标注，只保留术语
+                        term = line.split()[0]
+                        terms.add(term)
+        except Exception as e:
+            print(f"Warning: Failed to load legal terms: {e}")
+        return terms
+
+    def _extract_legal_terms(self, text: str) -> List[str]:
+        """从文本中提取法律术语"""
+        legal_terms_found = []
+        # 对于词典中的每个术语
+        for term in self.legal_terms:
+            # 使用正则表达式查找所有匹配项
+            matches = re.finditer(re.escape(term), text)
+            legal_terms_found.extend(term for _ in matches)
+        return legal_terms_found
+
+    def _analyze_term_distribution(self, terms: List[str]) -> Dict[str, int]:
+        """分析术语分布情况"""
+        distribution = defaultdict(int)
+        for term in terms:
+            distribution[term] += 1
+        return dict(sorted(distribution.items(), key=lambda x: x[1], reverse=True))
+
+    def _safe_analyze(self, method, *args, **kwargs):
+        """安全执行分析方法的装饰器实现"""
+        try:
+            return method(*args, **kwargs)
+        except Exception as e:
+            error_type = type(e).__name__
+            self.error_count[error_type] += 1
+            print(f"Warning: {error_type} occurred in {method.__name__}: {str(e)}")
+            return None
+
     def analyze_legal_structure(self, text: str) -> Dict:
         """分析法律文本结构"""
-        sections = self._split_into_sections(text)
-        structure_analysis = {
-            'section_count': len(sections),
-            'completeness': self._check_completeness(sections),
-            'hierarchy': self._analyze_hierarchy(sections)
-        }
-        return structure_analysis
+        try:
+            sections = self._split_into_sections(text)
+            structure_analysis = {
+                'section_count': len(sections),
+                'completeness': self._safe_analyze(self._check_completeness, sections),
+                'hierarchy': self._safe_analyze(self._analyze_hierarchy, sections),
+                'section_quality': self._safe_analyze(self._analyze_section_quality, sections),
+                'term_density': self._safe_analyze(self._analyze_term_density, text),
+                'error_statistics': dict(self.error_count)
+            }
+            return structure_analysis
+        except Exception as e:
+            print(f"Critical error in analyze_legal_structure: {str(e)}")
+            return {
+                'error': str(e),
+                'error_statistics': dict(self.error_count)
+            }
     
     def evaluate_legal_compliance(self, text: str, domain: str) -> Dict:
         """评估法律合规性"""
@@ -106,18 +164,10 @@ class LegalAnalyzer:
     def _intelligent_split_into_sections(self, text: str) -> Dict[str, str]:
         """更智能地将法律文本分割为章节及其内容"""
         sections = {}
-        # 匹配常见的章节标题模式，如 “一、XXX”, “第X条 XXX”, “1. XXX”
-        # (\d+|[一二三四五六七八九十百千万]+)[、.]?\s*([^\n]+)
-        # (?:^|\n)\s*((?:第[一二三四五六七八九十百千万]+条|[一二三四五六七八九十百千万]+[、．.]|\d+[、．.])\s*[^\n]+)
-        # 更通用的标题匹配，允许中英文括号等
-        # pattern = re.compile(r\"(?:^|\\n)\\s*((?:第[一二三四五六七八九十百千万]+条|[一二三四五六七八九十百千万]+[、．.]|\\d+[、．.]|[（(][一二三四五六七八九十百千万\\d]+[）)])\\s*[^\\n]+)\", re.MULTILINE)
         pattern = re.compile(r"(?:(?<=\n)|(?<=^))\s*((?:第[一二三四五六七八九十百千万]+条|[一二三四五六七八九十百千万]+[、．.]|\d+[、．.]|[（(][一二三四五六七八九十百千万\d]+[）)]|[A-Za-z]+\.))\s*[^\\n]+", re.MULTILINE)
         
         titles = pattern.findall(text)
         contents = pattern.split(text)
-        
-        # contents[0] 是第一个标题前的内容（如果有）
-        # contents[1] 是第一个标题, contents[2] 是第一个标题后的内容, contents[3] 是第二个标题, ...
         
         current_section_title = "引言或未明确章节"
         if contents:
@@ -274,3 +324,78 @@ class LegalAnalyzer:
                 advice.append(f"  - {section}")
 
         return advice
+    
+    def _analyze_section_quality(self, sections: List[str]) -> Dict:
+        """分析章节质量"""
+        quality_scores = {}
+        for section in sections:
+            # 评估每个章节的质量
+            clarity_score = self._assess_clarity(section)
+            completeness_score = self._assess_completeness(section)
+            consistency_score = self._assess_consistency(section)
+            
+            quality_scores[section[:30]] = {
+                'clarity': clarity_score,
+                'completeness': completeness_score,
+                'consistency': consistency_score,
+                'average': (clarity_score + completeness_score + consistency_score) / 3
+            }
+        return quality_scores
+    
+    def _analyze_term_density(self, text: str) -> Dict:
+        """分析法律术语密度"""
+        total_words = len(text.split())
+        legal_terms = self._extract_legal_terms(text)
+        density = len(legal_terms) / total_words if total_words > 0 else 0
+        
+        return {
+            'total_words': total_words,
+            'legal_terms_count': len(legal_terms),
+            'density': density,
+            'term_distribution': self._analyze_term_distribution(legal_terms)
+        }
+    
+    def _assess_clarity(self, section: str) -> float:
+        """评估文本清晰度"""
+        # 1. 句子长度分析
+        sentences = re.split(r'[。！？]', section)
+        avg_sentence_length = np.mean([len(s) for s in sentences if s])
+        
+        # 2. 专业术语使用频率
+        legal_terms = self._extract_legal_terms(section)
+        term_frequency = len(legal_terms) / len(section) if section else 0
+        
+        # 3. 标点符号使用
+        punctuation_ratio = len(re.findall(r'[，。；：！？、]', section)) / len(section) if section else 0
+        
+        # 计算综合得分 (0-1)
+        clarity_score = (
+            0.4 * (1 - min(avg_sentence_length / 100, 1)) +  # 较短的句子更清晰
+            0.3 * min(term_frequency * 10, 1) +  # 适度的专业术语
+            0.3 * min(punctuation_ratio * 5, 1)  # 适当的标点使用
+        )
+        
+        return min(max(clarity_score, 0), 1)  # 确保分数在0-1之间
+        
+    def _assess_completeness(self, section: str) -> float:
+        """评估章节的完整性"""
+        # 实现完整性评估逻辑
+        required_elements = ['定义', '范围', '权利', '义务', '责任']
+        found_elements = sum(1 for element in required_elements if element in section)
+        return found_elements / len(required_elements)
+        
+    def _assess_consistency(self, section: str) -> float:
+        """评估用语一致性"""
+        # 实现一致性评估逻辑
+        terms = self._extract_legal_terms(section)
+        term_counts = defaultdict(int)
+        for term in terms:
+            term_counts[term] += 1
+            
+        # 计算术语使用的变异系数
+        if term_counts:
+            mean = np.mean(list(term_counts.values()))
+            std = np.std(list(term_counts.values()))
+            cv = std / mean if mean > 0 else 0
+            return 1 - min(cv, 1)  # 转换为0-1分数，变异系数越小越好
+        return 0
