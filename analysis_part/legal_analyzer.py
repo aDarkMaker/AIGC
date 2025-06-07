@@ -3,7 +3,15 @@ from collections import defaultdict
 from typing import Dict, List, Tuple, Any
 import numpy as np
 from pathlib import Path
-import re # 新增导入
+import re
+import sys
+
+# 添加项目根路径到系统路径
+project_root = Path(__file__).parent.parent.absolute()
+sys.path.insert(0, str(project_root))
+
+from vivo_rag_system.src.api.vivo_llm import VivoLLMAPI
+from vivo_rag_system.src.core.rag_engine import RAGEngine
 
 class LegalAnalyzer:
     def __init__(self):
@@ -16,6 +24,10 @@ class LegalAnalyzer:
         self.legal_terms = self._load_legal_terms(legal_terms_path)
         
         self.error_count = defaultdict(int)
+        
+        # 初始化VIVO LLM API和RAG引擎
+        self.llm_api = VivoLLMAPI()
+        self.rag_engine = RAGEngine()
         
     def _load_legal_terms(self, path: Path) -> set:
         """加载法律术语词典"""
@@ -57,20 +69,39 @@ class LegalAnalyzer:
             error_type = type(e).__name__
             self.error_count[error_type] += 1
             print(f"Warning: {error_type} occurred in {method.__name__}: {str(e)}")
-            return None
-
+            return None    
+        
     def analyze_legal_structure(self, text: str) -> Dict:
         """分析法律文本结构"""
         try:
             sections = self._split_into_sections(text)
+            sections_content = self._intelligent_split_into_sections(text)
+            
+            # 对每个章节使用LLM进行评估
+            llm_scores = {}
+            for title, content in sections_content.items():
+                llm_scores[title] = self._safe_analyze(
+                    self._llm_quality_assessment, 
+                    content, 
+                    title, 
+                    "privacy"  # 默认domain，实际使用时应该传入
+                )
+            
             structure_analysis = {
                 'section_count': len(sections),
                 'completeness': self._safe_analyze(self._check_completeness, sections),
                 'hierarchy': self._safe_analyze(self._analyze_hierarchy, sections),
                 'section_quality': self._safe_analyze(self._analyze_section_quality, sections),
                 'term_density': self._safe_analyze(self._analyze_term_density, text),
+                'llm_assessment': llm_scores,  # LLM评估结果
                 'error_statistics': dict(self.error_count)
             }
+            
+            # 获取相似案例进行参考
+            similar_cases = self._safe_analyze(self._get_similar_cases, text, "privacy")
+            if similar_cases:
+                structure_analysis['similar_cases'] = similar_cases
+            
             return structure_analysis
         except Exception as e:
             print(f"Critical error in analyze_legal_structure: {str(e)}")
@@ -391,3 +422,183 @@ class LegalAnalyzer:
             cv = std / mean if mean > 0 else 0
             return 1 - min(cv, 1)  # 转换为0-1分数，变异系数越小越好
         return 0
+
+    def _llm_quality_assessment(self, section: str, section_name: str, domain: str) -> Dict:
+        """使用LLM评估章节质量
+        
+        Args:
+            section: 章节内容
+            section_name: 章节名称
+            domain: 领域名称，如 "privacy", "contract" 等
+            
+        Returns:
+            包含评分和建议的字典
+        """
+        try:
+            messages = [
+                {
+                    "role": "system",
+                    "content": f"你是一个专业的{domain}领域法律文本评估专家。请对以下文本进行专业评估，重点关注：专业性、完整性、清晰度、合规性。"
+                },
+                {
+                    "role": "user",
+                    "content": f"""请对以下'{section_name}'章节进行评估，并给出具体分数(1-100)和改进建议：
+
+{section}
+
+请按以下JSON格式返回评估结果：
+{{
+    "clarity_score": 分数,
+    "completeness_score": 分数,
+    "compliance_score": 分数,
+    "suggestions": ["建议1", "建议2", ...]
+}}"""
+                }
+            ]
+
+            response = self.llm_api.chat_completion(messages, temperature=0.3)
+            return self._parse_llm_scores(response)
+
+        except Exception as e:
+            print(f"LLM评估失败: {str(e)}")
+            return {
+                "clarity_score": 0,
+                "completeness_score": 0,
+                "compliance_score": 0,
+                "suggestions": [f"评估失败: {str(e)}"]
+            }
+
+    def _parse_llm_scores(self, response: str) -> Dict:
+        """解析LLM返回的评分结果
+        
+        Args:
+            response: LLM返回的JSON字符串
+        
+        Returns:
+            解析后的评分字典
+        """
+        try:
+            # 尝试直接解析JSON
+            scores = json.loads(response)
+            return scores
+        except json.JSONDecodeError:
+            # 如果直接解析失败，尝试从文本中提取分数
+            scores = {
+                "clarity_score": self._extract_score(response, "clarity"),
+                "completeness_score": self._extract_score(response, "completeness"),
+                "compliance_score": self._extract_score(response, "compliance"),
+                "suggestions": []
+            }
+            
+            # 提取建议
+            suggestions = re.findall(r'"([^"]+)"', response)
+            if suggestions:
+                scores["suggestions"] = suggestions
+            
+            return scores
+
+    def _extract_score(self, text: str, score_type: str) -> float:
+        """从文本中提取特定类型的分数
+        
+        Args:
+            text: 要分析的文本
+            score_type: 分数类型 (clarity/completeness/compliance)
+            
+        Returns:
+            提取到的分数，如果未找到则返回0
+        """
+        try:
+            # 查找类似于 "clarity_score": 85 的模式
+            pattern = rf'"{score_type}_score":\s*(\d+)'
+            match = re.search(pattern, text)
+            if match:
+                return float(match.group(1))
+            return 0
+        except Exception:
+            return 0
+
+    def _get_similar_cases(self, text: str, domain: str) -> List[Dict]:
+        """获取相似案例
+        
+        Args:
+            text: 要分析的文本
+            domain: 领域名称
+            
+        Returns:
+            相似案例列表
+        """
+        try:
+            # 使用RAG引擎的process_query方法处理查询
+            rag_result = self.rag_engine.process_query(text, use_professional_kb=True)
+            
+            if not rag_result.get('context'):
+                return []
+                
+            # 将上下文分割成单独的案例
+            cases = [case.strip() for case in rag_result['context'].split('相关文档') if case.strip()]
+            
+            # 构建批量处理的prompt
+            case_contents = []
+            for case in cases:
+                case_content = case
+                if '关键词:' in case:
+                    case_content = case.split('关键词:')[0].strip()
+                case_contents.append(case_content)
+            
+            # 构建单个批量处理prompt
+            batch_prompt = [
+                {
+                    "role": "system",
+                    "content": "你是一个法律案例相关性分析专家。请分析多个案例与目标案例的相关性。"
+                },
+                {
+                    "role": "user",
+                    "content": f'''请分析以下多个案例与目标案例的相关性，为每个案例给出0-100的相关度分数和原因。
+
+目标案例：
+{text}
+
+待分析案例：
+{chr(10).join(f"案例{i+1}：{case_content}" for i, case_content in enumerate(case_contents))}
+
+请用JSON格式返回分析结果，格式如下：
+{{
+    "analyses": [
+        {{
+            "case_index": 1,
+            "relevance_score": 分数,
+            "reasoning": "原因描述"
+        }},
+        // ... 其他案例的分析结果
+    ]
+}}'''
+                }
+            ]
+            
+            try:
+                # 一次性获取所有案例的相关性分析结果
+                batch_result = self.llm_api.chat_completion(batch_prompt, temperature=0.3)
+                result_data = json.loads(batch_result)
+                
+                # 处理分析结果
+                enriched_cases = []
+                for analysis in result_data.get('analyses', []):
+                    case_index = analysis.get('case_index', 1) - 1  # 转换为0-based索引
+                    if 0 <= case_index < len(case_contents):
+                        enriched_cases.append({
+                            "content": case_contents[case_index],
+                            "relevance_score": analysis.get('relevance_score', 0),
+                            "reasoning": analysis.get('reasoning', '未提供分析原因')
+                        })
+                
+            except Exception as e:
+                print(f"批量案例相关性分析失败: {str(e)}")
+                # 如果批量处理失败，返回空结果
+                return []
+            
+            # 按相关度排序
+            return sorted(enriched_cases, key=lambda x: x['relevance_score'], reverse=True)
+
+        except Exception as e:
+            print(f"获取相似案例失败: {str(e)}")
+            return []
