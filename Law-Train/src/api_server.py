@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import JSONResponse, FileResponse
 from transformers import AutoTokenizer, AutoModel
 import torch
 import torch.nn.functional as F
@@ -7,6 +8,7 @@ import json
 import uvicorn
 from pydantic import BaseModel
 from contextlib import asynccontextmanager # 新增导入
+from fastapi.staticfiles import StaticFiles
 
 class Query(BaseModel):
     text: str
@@ -99,12 +101,21 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan) # 使用 lifespan
 
+# 挂载静态文件目录，用于提供HTML/CSS/JS
+app.mount("/static", StaticFiles(directory=Path(__file__).parent / "static"), name="static")
+
+@app.get("/") # 新增的健康检查接口
+async def read_root():
+    # return {"message": "Legal AI API is running"}
+    # 修改为返回HTML页面
+    return FileResponse(Path(__file__).parent / "api_ui.html")
+
 @app.post("/query")
 async def query_laws(query: Query):
     if adviser is None:
-        return {"error": "Legal adviser not initialized. Please wait or check server logs."}
+        return JSONResponse(content={"error": "Legal adviser not initialized. Please wait or check server logs."}, status_code=503)
     relevant_laws = adviser.get_relevant_laws(query.text)
-    return {"results": relevant_laws}
+    return JSONResponse(content={"results": relevant_laws})
 
 if __name__ == "__main__":
     # 确保路径正确，特别是模型路径
@@ -113,4 +124,4 @@ if __name__ == "__main__":
     # print(f"Checking model directory: {model_dir_check}, Exists: {model_dir_check.exists()}")
     # print(f"Checking corpus file: {corpus_file_check}, Exists: {corpus_file_check.exists()}")
     
-    uvicorn.run("api_server:app", host="0.0.0.0", port=8000, reload=True) # 使用字符串导入应用，方便重载
+    uvicorn.run("api_server:app", host="127.0.0.1", port=8000, reload=True) # 使用字符串导入应用，方便重载

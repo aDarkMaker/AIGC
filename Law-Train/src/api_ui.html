@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>法律AI助手查询</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f4f9; color: #333; }
+        .container { max-width: 800px; margin: 40px auto; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1 { color: #333; text-align: center; }
+        textarea { width: calc(100% - 22px); padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; }
+        button { display: block; width: 100%; padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease; }
+        button:hover { background-color: #0056b3; }
+        #results { margin-top: 20px; padding: 10px; background-color: #e9ecef; border-radius: 4px; }
+        .result-item { margin-bottom: 15px; padding: 15px; background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 4px; }
+        .result-item:last-child { margin-bottom: 0; }
+        .result-item h3 { margin-top: 0; color: #007bff; }
+        .result-item p { margin-bottom: 5px; line-height: 1.6; }
+        .error-message { color: red; font-weight: bold; }
+        .loading-message { color: #007bff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>法律AI助手查询</h1>
+        <textarea id="queryText" rows="5" placeholder="在此输入您的法律问题..."></textarea>
+        <button onclick="submitQuery()">提交查询</button>
+        <h2>查询结果:</h2>
+        <div id="results">
+            <p>请先输入问题并点击“提交查询”。</p>
+        </div>
+    </div>
+
+    <script>
+        async function submitQuery() {
+            const queryText = document.getElementById('queryText').value;
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<p class="loading-message">正在查询，请稍候...</p>';
+
+            if (!queryText.trim()) {
+                resultsDiv.innerHTML = '<p class="error-message">请输入查询内容！</p>';
+                return;
+            }
+
+            try {
+                const response = await fetch('/query', { // API端点
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ text: queryText }),
+                });
+
+                if (!response.ok) {
+                    let errorMsg = `HTTP error! status: ${response.status}`;
+                    try {
+                        const errorData = await response.json();
+                        errorMsg += `, message: ${errorData.error || '未知服务器错误'}`;
+                    } catch (e) {
+                        // 如果错误响应不是JSON格式
+                        errorMsg += `, 无法解析错误响应。`;
+                    }
+                    throw new Error(errorMsg);
+                }
+
+                const data = await response.json();
+
+                if (data.error) {
+                    resultsDiv.innerHTML = `<p class="error-message">查询出错: ${data.error}</p>`;
+                } else if (data.results && data.results.length > 0) {
+                    let html = '';
+                    data.results.forEach(item => {
+                        html += `<div class="result-item">
+                                    <h3>${item.title || '无标题'}</h3>
+                                    <p><strong>分类:</strong> ${item.category || 'N/A'}</p>
+                                    <p><strong>内容摘要:</strong> ${item.content ? (item.content.substring(0, 300) + (item.content.length > 300 ? '...' : '')) : 'N/A'}</p>
+                                    <p><strong>相似度:</strong> ${item.similarity !== undefined ? item.similarity.toFixed(4) : 'N/A'}</p>
+                                 </div>`;
+                    });
+                    resultsDiv.innerHTML = html;
+                } else {
+                    resultsDiv.innerHTML = '<p>未找到相关法律条文。</p>';
+                }
+            } catch (error) {
+                console.error('查询失败:', error);
+                resultsDiv.innerHTML = `<p class="error-message">查询请求失败: ${error.message}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
