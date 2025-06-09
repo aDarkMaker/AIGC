@@ -62,7 +62,7 @@ class VivoEmbeddingAPI:
             response_data = response.json()
 
             # 调试日志
-            print(f"[API Response] {response_data}")
+            # print(f"[API Response] {response_data}")
 
             # 安全访问data字段
             embeddings = response_data.get('data')

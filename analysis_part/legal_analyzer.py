@@ -498,15 +498,6 @@ class LegalAnalyzer:
             return scores
 
     def _extract_score(self, text: str, score_type: str) -> float:
-        """从文本中提取特定类型的分数
-        
-        Args:
-            text: 要分析的文本
-            score_type: 分数类型 (clarity/completeness/compliance)
-            
-        Returns:
-            提取到的分数，如果未找到则返回0
-        """
         try:
             # 查找类似于 "clarity_score": 85 的模式
             pattern = rf'"{score_type}_score":\s*(\d+)'
@@ -530,8 +521,10 @@ class LegalAnalyzer:
         try:
             # 使用RAG引擎的process_query方法处理查询
             rag_result = self.rag_engine.process_query(text, use_professional_kb=True)
+            print(f"RAG_RESULT_DEBUG: {rag_result}") # 添加这行用于调试RAG结果
             
             if not rag_result.get('context'):
+                print("RAG_RESULT_DEBUG: Context is empty, returning early.") # 调试信息
                 return []
                 
             # 将上下文分割成单独的案例
@@ -578,6 +571,7 @@ class LegalAnalyzer:
             try:
                 # 一次性获取所有案例的相关性分析结果
                 batch_result = self.llm_api.chat_completion(batch_prompt, temperature=0.3)
+                print(f"LLM_BATCH_RESULT_DEBUG: {batch_result}") # 保留这行用于调试LLM结果
                 result_data = json.loads(batch_result)
                 
                 # 处理分析结果
