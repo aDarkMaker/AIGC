@@ -1,7 +1,7 @@
 Target:
 https://flk.npc.gov.cn/fl.html
 
-待完成：
+待完成：done
 
 1. 爬取所有法律条文
 2. 训练模型
@@ -12,3 +12,9 @@ https://flk.npc.gov.cn/fl.html
 DATA(存储训练用数据)
 Model(存放训练好模型)
 Src(存放训练代码)
+
+todo:
+
+1. RAG 分析器接入训练好的 model
+2. 重新定义打分器
+3. 优化检索
