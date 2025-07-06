@@ -4,6 +4,8 @@ from pathlib import Path
 import argparse
 import json
 from typing import Dict, Any, Optional
+import importlib.util
+
 
 # 添加项目根路径到系统路径
 project_root = Path(__file__).parent.absolute()
@@ -21,13 +23,12 @@ def load_training_modules():
         import torch
         import transformers
         
-        # 将 Law-Train 目录添加到路径
-        law_train_path = project_root / "Law-Train"
-        if str(law_train_path) not in sys.path:
-            sys.path.insert(0, str(law_train_path))
-        
-        # 导入训练模块
-        from src.train import LegalBertTrainer, LegalCorpusDataset
+        law_train_path = project_root / "Law-Train" / "src" / "train.py"
+        spec = importlib.util.spec_from_file_location("train", str(law_train_path))
+        train_module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(train_module)
+        LegalBertTrainer = train_module.LegalBertTrainer
+        LegalCorpusDataset = train_module.LegalCorpusDataset
         print("✓ 训练模块已成功加载")
         return True, LegalBertTrainer, LegalCorpusDataset
         

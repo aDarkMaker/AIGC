@@ -1,0 +1,5 @@
+PowerShell: 
+Step1:(虚拟环境)
+    .\Law-Train\train\Scripts\activate
+Step2:(运行临时网页)
+python .\web_interface\server.py

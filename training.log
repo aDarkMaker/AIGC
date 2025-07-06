@@ -14,3 +14,28 @@
 2025-07-05 18:35:06,861 - INFO - 正在保存模型...
 2025-07-05 18:35:07,110 - INFO - 模型已保存至: D:\zc\AIGC_Programme\Law-Train\model\trained_model
 2025-07-05 18:35:07,111 - INFO - === 训练流程已完成 ===
+2025-07-06 16:54:57,479 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-07-06 16:54:57,844 - INFO - 正在加载预训练模型: bert-base-chinese
+2025-07-06 16:54:57,846 - INFO - 尝试从本地加载预训练模型...
+2025-07-06 16:54:58,869 - INFO - 成功从本地加载预训练模型
+2025-07-06 16:54:58,870 - INFO - 模型加载完成
+2025-07-06 16:54:58,908 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-06 16:54:58,909 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-06 16:54:58,912 - INFO -  * Restarting with stat
+2025-07-06 16:55:17,806 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-07-06 16:55:18,184 - INFO - 正在加载预训练模型: bert-base-chinese
+2025-07-06 16:55:18,185 - INFO - 尝试从本地加载预训练模型...
+2025-07-06 16:55:19,321 - INFO - 成功从本地加载预训练模型
+2025-07-06 16:55:19,322 - INFO - 模型加载完成
+2025-07-06 16:55:19,352 - WARNING -  * Debugger is active!
+2025-07-06 16:55:19,400 - INFO -  * Debugger PIN: 920-124-228
+2025-07-06 16:55:27,757 - INFO - 127.0.0.1 - - [06/Jul/2025 16:55:27] "GET / HTTP/1.1" 200 -
+2025-07-06 16:55:27,847 - INFO - 127.0.0.1 - - [06/Jul/2025 16:55:27] "GET /styles.css HTTP/1.1" 200 -
+2025-07-06 16:55:27,850 - INFO - 127.0.0.1 - - [06/Jul/2025 16:55:27] "GET /script.js HTTP/1.1" 200 -
+2025-07-06 16:55:28,555 - INFO - 127.0.0.1 - - [06/Jul/2025 16:55:28] "GET /法律援助.png HTTP/1.1" 200 -
+2025-07-06 16:56:10,749 - DEBUG - Building prefix dict from the default dictionary ...
+2025-07-06 16:56:12,397 - DEBUG - Dumping model to file cache C:\Users\lenovo\AppData\Local\Temp\jieba.cache
+2025-07-06 16:56:12,548 - DEBUG - Loading model cost 1.798 seconds.
+2025-07-06 16:56:12,549 - DEBUG - Prefix dict has been built successfully.
+2025-07-06 16:56:47,856 - INFO - 127.0.0.1 - - [06/Jul/2025 16:56:47] "POST /analyze HTTP/1.1" 200 -
